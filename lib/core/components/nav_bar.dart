@@ -1,3 +1,4 @@
+
 import 'package:aion/core/constants/app_colors.dart';
 import 'package:aion/core/utils/size_konfig.dart';
 import 'package:aion/cubit/cubit_state.dart';
@@ -38,8 +39,11 @@ class _NavBarState extends State<NavBar> {
         unselectedFontSize: he(12),
         type: BottomNavigationBarType.fixed,
         onTap: (v) {
-          context.read<AppBlock>().addPages(v);
+        
+            context.read<AppBlock>().addPages(v);
+
         },
+        
         selectedItemColor: AppColors.primarColor,
         unselectedItemColor: AppColors.black,
         currentIndex: context.watch<AppBlock>().currentIndex,
@@ -49,35 +53,36 @@ class _NavBarState extends State<NavBar> {
               padding: EdgeInsets.only(bottom: he(7)),
               child: const Icon(Icons.description_outlined),
             ),
-            label: '',
+            label: 'Contacts',
           ),
           BottomNavigationBarItem(
             icon: Padding(
               padding: EdgeInsets.only(bottom: he(7)),
               child: const Icon(Icons.history),
             ),
-            label: '',
+            label: 'History',
           ),
           BottomNavigationBarItem(
             icon: Padding(
               padding: EdgeInsets.only(bottom: he(7)),
               child: const Icon(Icons.add_box_outlined),
             ),
-            label: '',
+            label: 'New',
           ),
           BottomNavigationBarItem(
+            
             icon: Padding(
               padding: EdgeInsets.only(bottom: he(7)),
               child: const Icon(Icons.bookmark_outline_sharp),
             ),
-            label: '',
+            label: 'Saved',
           ),
           BottomNavigationBarItem(
             icon: Padding(
               padding: EdgeInsets.only(bottom: he(7)),
               child: const Icon(Icons.person),
             ),
-            label: '',
+            label: 'Profile',
           ),
         ],
       ),
