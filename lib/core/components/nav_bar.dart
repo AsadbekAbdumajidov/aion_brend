@@ -49,8 +49,8 @@ class _NavBarState extends State<NavBar> {
               child: SvgPicture.asset("assets/svg/home.svg",
                   alignment: Alignment.bottomCenter,
                   color: context.watch<AppBlock>().currentIndex == 0
-                      ? AppColors.primarColor
-                      : AppColors.black),
+                      ? AppColors.instance.primarColor
+                      : AppColors.instance.black),
             ),
             label: 'Home',
           ),
@@ -59,8 +59,8 @@ class _NavBarState extends State<NavBar> {
               padding: EdgeInsets.symmetric(vertical: he(5)),
               child: SvgPicture.asset("assets/svg/explore.svg",
                   color: context.watch<AppBlock>().currentIndex == 1
-                      ? AppColors.primarColor
-                      : AppColors.black),
+                      ? AppColors.instance.primarColor
+                      : AppColors.instance.black),
             ),
             label: 'Explore',
           ),
@@ -69,8 +69,8 @@ class _NavBarState extends State<NavBar> {
               padding: EdgeInsets.symmetric(vertical: he(5)),
               child: SvgPicture.asset("assets/svg/cart.svg",
                   color: context.watch<AppBlock>().currentIndex == 2
-                      ? AppColors.primarColor
-                      : AppColors.black),
+                      ? AppColors.instance.primarColor
+                      : AppColors.instance.black),
             ),
             label: 'Cart',
           ),
@@ -79,8 +79,8 @@ class _NavBarState extends State<NavBar> {
               padding: EdgeInsets.symmetric(vertical: he(5)),
               child: SvgPicture.asset("assets/svg/favorite.svg",
                   color: context.watch<AppBlock>().currentIndex == 3
-                      ? AppColors.primarColor
-                      : AppColors.black),
+                      ? AppColors.instance.primarColor
+                      : AppColors.instance.black),
             ),
             label: 'Favorite',
             
@@ -90,8 +90,8 @@ class _NavBarState extends State<NavBar> {
               padding: EdgeInsets.symmetric(vertical: he(5)),
               child: SvgPicture.asset("assets/svg/profile.svg",
                   color: context.watch<AppBlock>().currentIndex == 4
-                      ? AppColors.primarColor
-                      : AppColors.black),
+                      ? AppColors.instance.primarColor
+                      : AppColors.instance.black),
             ),
             label: 'Profile',
           ),

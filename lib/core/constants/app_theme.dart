@@ -1,17 +1,16 @@
 import 'package:aion/core/constants/app_colors.dart';
-import 'package:aion/core/utils/size_konfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 final appThemeData = ThemeData(
-  colorScheme:
-      ColorScheme.fromSwatch().copyWith(secondary: AppColors.primarColor),
-  appBarTheme: const AppBarTheme(
-    backgroundColor: AppColors.backGround,
+  colorScheme: ColorScheme.fromSwatch()
+      .copyWith(secondary: AppColors.instance.primarColor),
+  appBarTheme: AppBarTheme(
+    backgroundColor: AppColors.instance.backGround,
     elevation: 0,
-    iconTheme: IconThemeData(color: AppColors.black),
-    systemOverlayStyle: SystemUiOverlayStyle(
+    iconTheme: IconThemeData(color: AppColors.instance.black),
+    systemOverlayStyle: const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
       systemNavigationBarColor: Colors.transparent,
       statusBarIconBrightness: Brightness.dark,
@@ -22,15 +21,14 @@ final appThemeData = ThemeData(
   ),
   fontFamily: 'SFPro',
   // Bottom Nav Bar
-  bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-    backgroundColor: AppColors.backGround,
+  bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    backgroundColor: AppColors.instance.backGround,
     type: BottomNavigationBarType.fixed,
-    unselectedItemColor: AppColors.black,
-    selectedItemColor: AppColors.primarColor,
-    
+    unselectedItemColor: AppColors.instance.black,
+    selectedItemColor: AppColors.instance.primarColor,
   ),
-  backgroundColor: AppColors.backGround,
-  scaffoldBackgroundColor: AppColors.backGround,
+  backgroundColor: AppColors.instance.backGround,
+  scaffoldBackgroundColor: AppColors.instance.backGround,
   cupertinoOverrideTheme: const CupertinoThemeData(brightness: Brightness.dark),
   visualDensity: VisualDensity.adaptivePlatformDensity,
   pageTransitionsTheme: const PageTransitionsTheme(builders: {

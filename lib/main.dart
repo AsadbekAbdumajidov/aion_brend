@@ -1,5 +1,5 @@
 import 'package:aion/core/constants/app_theme.dart';
-import 'package:aion/router/app_pages.dart';
+import 'package:aion/core/router/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Aion.brend',
       theme: appThemeData,
-      onGenerateRoute: RouteGenerateKit().generateKit,
+      onGenerateRoute: Routes.instance.generateRoue,
       supportedLocales: const [
         Locale('en'),
         Locale('ru'),
