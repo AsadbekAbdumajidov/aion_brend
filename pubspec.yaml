@@ -23,6 +23,8 @@ dependencies:
   cubit_form: ^2.0.1
   carousel_slider: ^4.1.1
   flutter_svg: ^1.0.3
+  # internet uchun
+  connectivity_plus: ^2.3.0
 
 dev_dependencies:
   flutter_test:

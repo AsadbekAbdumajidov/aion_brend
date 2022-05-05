@@ -15,24 +15,7 @@ class MyApp extends StatelessWidget {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
     ]);
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Aion.brend',
-      theme: appThemeData,
-      onGenerateRoute: Routes.instance.generateRoue,
-      supportedLocales: const [
-        Locale('en'),
-        Locale('ru'),
-        Locale('fr'),
-      ],
-      builder: (context, child) {
-        return ScrollConfiguration(
-          behavior: MyBehavior(),
-          child: child!,
-        );
-      },
-      initialRoute: "/navBar",
-    );
+    return appMaterial();
   }
 }
 
@@ -40,4 +23,25 @@ class MyBehavior extends ScrollBehavior {
   @override
   ScrollPhysics getScrollPhysics(BuildContext context) =>
       const ClampingScrollPhysics();
+}
+
+appMaterial() {
+  return MaterialApp(
+    debugShowCheckedModeBanner: false,
+    title: 'Aion.brend',
+    theme: appThemeData,
+    onGenerateRoute: Routes.instance.generateRoue,
+    supportedLocales: const [
+      Locale('en'),
+      Locale('ru'),
+      Locale('fr'),
+    ],
+    builder: (context, child) {
+      return ScrollConfiguration(
+        behavior: MyBehavior(),
+        child: child!,
+      );
+    },
+    initialRoute: "/navBar",
+  );
 }
