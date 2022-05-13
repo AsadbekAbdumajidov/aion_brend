@@ -25,6 +25,11 @@ class AppTextStyles {
     fontSize: he(12),
     fontWeight: FontWeight.w500,
   );
+   TextStyle styleW500S13Black = TextStyle(
+    color: AppColors.instance.black,
+    fontSize: he(13),
+    fontWeight: FontWeight.w500,
+  );
 
   TextStyle styleW600S15Black = TextStyle(
       color: AppColors.instance.black,

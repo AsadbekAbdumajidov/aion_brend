@@ -5,6 +5,7 @@ import 'package:aion/core/constants/app_style.dart';
 import 'package:aion/core/extension/for_context.dart';
 import 'package:aion/core/utils/size_konfig.dart';
 import 'package:aion/views/tabs/home/widgets/cupertino_tab_bar.dart';
+import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -43,7 +44,7 @@ class _HomeState extends State<Home> {
             SizedBox(height: he(20)),
             Text("Barchasi", style: AppTextStyles.instance.styleW600S15Black),
             GridView.builder(
-              padding: EdgeInsets.only(top: he(10)),
+              padding: EdgeInsets.symmetric(vertical: he(10)),
               scrollDirection: Axis.vertical,
               shrinkWrap: true,
               itemCount: 15,
@@ -76,10 +77,11 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     Padding(
-                      padding:  EdgeInsets.symmetric(horizontal: wi(10),vertical: he(5)),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: wi(10), vertical: he(5)),
                       child: Column(
                         children: [
-                           Text(
+                          Text(
                             "2022 new collection. Narxi: 179.000. O'lcham: M-5XL. ",
                             overflow: TextOverflow.ellipsis,
                             maxLines: 2,
@@ -95,8 +97,8 @@ class _HomeState extends State<Home> {
                               ),
                               SizedBox(width: wi(10)),
                               Text("150 000",
-                                  style:
-                                      AppTextStyles.instance.stylew600S14Primary)
+                                  style: AppTextStyles
+                                      .instance.stylew600S14Primary)
                             ],
                           )
                         ],
