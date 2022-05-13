@@ -12,5 +12,6 @@ class AppIcons {
   String icExxplore = "assets/svg/explore.svg";
   String icCart = "assets/svg/cart.svg";
   String icSearchField = "assets/svg/ic_search_field.svg";
-   String icProfile = "assets/svg/profile.svg";
+  String icProfile = "assets/svg/profile.svg";
+  String icFlag = "assets/svg/ic_flag.svg";
 }

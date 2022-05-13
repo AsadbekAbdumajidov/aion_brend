@@ -21,12 +21,8 @@ const defaultDuration = Duration(days: 1, hours: 15, minutes: 30);
 class _CaruselState extends State<Carusel> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage("assets/images/maschid.jpg"), fit: BoxFit.cover),
-      ),
       child: CarouselSlider.builder(
         itemCount: 9,
         itemBuilder: (_, __, pagev) {
@@ -90,7 +86,7 @@ class _CaruselState extends State<Carusel> {
                   bottom: he(-4),
                   right: wi(-4),
                   child: SvgPicture.asset(
-                    "assets/svg/sale_logo.svg",
+                    "assets/svg/ic_sale_logo.svg",
                     height: he(70),
                     width: wi(70),
                   ))

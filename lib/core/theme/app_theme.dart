@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 final appThemeData = ThemeData(
-  
   colorScheme: ColorScheme.fromSwatch()
       .copyWith(secondary: AppColors.instance.primarColor),
   appBarTheme: AppBarTheme(
