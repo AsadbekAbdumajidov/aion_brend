@@ -1,7 +1,8 @@
 import 'package:aion/core/constants/app_colors.dart';
+import 'package:aion/core/constants/app_icons.dart';
 import 'package:aion/core/utils/size_konfig.dart';
-import 'package:aion/cubit/cubit_state.dart';
-import 'package:aion/cubit/nav_bar_cubit.dart';
+import 'package:aion/cubit/nav_bar/nav_bar_cubit.dart';
+import 'package:aion/cubit/nav_bar/nav_bar_state.dart';
 import 'package:cubit_form/cubit_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -15,12 +16,13 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
+  
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return BlocProvider(
-      create: (context) => AppBlock(),
-      child: BlocConsumer<AppBlock, AppState>(
+      create: (context) => NavBarCubit(),
+      child: BlocConsumer<NavBarCubit, NavBarState>(
         listener: (context, state) {},
         builder: (context, state) {
           return scaffold(context);
@@ -32,23 +34,22 @@ class _NavBarState extends State<NavBar> {
   Scaffold scaffold(BuildContext context) {
     return Scaffold(
       body: context
-          .read<AppBlock>()
-          .pages[context.watch<AppBlock>().currentIndex],
+          .read<NavBarCubit>()
+          .pages[context.watch<NavBarCubit>().currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: (v) {
-          context.read<AppBlock>().addPages(v);
+          context.read<NavBarCubit>().addPages(v);
         },
-      unselectedFontSize: he(10),
-      selectedFontSize: he(10),  
-       
-        currentIndex: context.watch<AppBlock>().currentIndex,
+        unselectedFontSize: he(10),
+        selectedFontSize: he(10),
+        currentIndex: context.watch<NavBarCubit>().currentIndex,
         items: [
           BottomNavigationBarItem(
             icon: Padding(
               padding: EdgeInsets.symmetric(vertical: he(5)),
-              child: SvgPicture.asset("assets/svg/home.svg",
+              child: SvgPicture.asset(AppIcons.instance.icHome,
                   alignment: Alignment.bottomCenter,
-                  color: context.watch<AppBlock>().currentIndex == 0
+                  color: context.watch<NavBarCubit>().currentIndex == 0
                       ? AppColors.instance.primarColor
                       : AppColors.instance.black),
             ),
@@ -57,8 +58,8 @@ class _NavBarState extends State<NavBar> {
           BottomNavigationBarItem(
             icon: Padding(
               padding: EdgeInsets.symmetric(vertical: he(5)),
-              child: SvgPicture.asset("assets/svg/explore.svg",
-                  color: context.watch<AppBlock>().currentIndex == 1
+              child: SvgPicture.asset(AppIcons.instance.icExxplore,
+                  color: context.watch<NavBarCubit>().currentIndex == 1
                       ? AppColors.instance.primarColor
                       : AppColors.instance.black),
             ),
@@ -67,8 +68,8 @@ class _NavBarState extends State<NavBar> {
           BottomNavigationBarItem(
             icon: Padding(
               padding: EdgeInsets.symmetric(vertical: he(5)),
-              child: SvgPicture.asset("assets/svg/cart.svg",
-                  color: context.watch<AppBlock>().currentIndex == 2
+              child: SvgPicture.asset(AppIcons.instance.icCart,
+                  color: context.watch<NavBarCubit>().currentIndex == 2
                       ? AppColors.instance.primarColor
                       : AppColors.instance.black),
             ),
@@ -77,19 +78,18 @@ class _NavBarState extends State<NavBar> {
           BottomNavigationBarItem(
             icon: Padding(
               padding: EdgeInsets.symmetric(vertical: he(5)),
-              child: SvgPicture.asset("assets/svg/favorite.svg",
-                  color: context.watch<AppBlock>().currentIndex == 3
+              child: SvgPicture.asset(AppIcons.instance.icFavorite,
+                  color: context.watch<NavBarCubit>().currentIndex == 3
                       ? AppColors.instance.primarColor
                       : AppColors.instance.black),
             ),
             label: 'Favorite',
-            
           ),
           BottomNavigationBarItem(
             icon: Padding(
               padding: EdgeInsets.symmetric(vertical: he(5)),
-              child: SvgPicture.asset("assets/svg/profile.svg",
-                  color: context.watch<AppBlock>().currentIndex == 4
+              child: SvgPicture.asset(AppIcons.instance.icProfile,
+                  color: context.watch<NavBarCubit>().currentIndex == 4
                       ? AppColors.instance.primarColor
                       : AppColors.instance.black),
             ),

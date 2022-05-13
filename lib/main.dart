@@ -1,4 +1,4 @@
-import 'package:aion/core/constants/app_theme.dart';
+import 'package:aion/core/theme/app_theme.dart';
 import 'package:aion/core/router/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

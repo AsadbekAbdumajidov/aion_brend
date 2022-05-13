@@ -25,6 +25,15 @@ dependencies:
   flutter_svg: ^1.0.3
   # internet uchun
   connectivity_plus: ^2.3.0
+  animate_do: ^2.1.0
+  filter_list: ^1.0.1
+  cupertino_tabbar: ^2.0.0
+  google_fonts: ^2.3.2
+  equatable: ^2.0.3
+  # timer uchun
+  slide_countdown: ^0.2.4
+  # imgni cached qilish uchun
+  cached_network_image: ^3.2.0
 
 dev_dependencies:
   flutter_test:
@@ -43,6 +52,9 @@ flutter:
     - family: SFPro
       fonts:
         - asset: assets/fonts/SFPro.ttf
+    - family: Mer
+      fonts:
+        - asset: assets/fonts/merriweather.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
