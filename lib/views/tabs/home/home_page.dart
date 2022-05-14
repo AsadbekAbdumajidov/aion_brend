@@ -4,10 +4,13 @@ import 'package:aion/core/constants/app_icons.dart';
 import 'package:aion/core/constants/app_style.dart';
 import 'package:aion/core/extension/for_context.dart';
 import 'package:aion/core/utils/size_konfig.dart';
+import 'package:aion/cubit/favorite/favorite_cubit.dart';
+import 'package:aion/cubit/favorite/favorite_state.dart';
 import 'package:aion/views/tabs/home/widgets/cupertino_tab_bar.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Home extends StatefulWidget {
@@ -62,19 +65,48 @@ class _HomeState extends State<Home> {
                     borderRadius: const BorderRadius.all(Radius.circular(11))),
                 child: Column(
                   children: [
-                    SizedBox(
-                      height: he(182),
-                      width: context.w,
-                      child: ClipRRect(
-                        borderRadius: const BorderRadius.only(
-                            topLeft: Radius.circular(11),
-                            topRight: Radius.circular(11)),
-                        child: CachedNetworkImage(
-                          imageUrl:
-                              "https://img.freepik.com/free-psd/front-view-of-man-posing-while-wearing-t-shirt_23-2148457384.jpg?w=2000",
-                          fit: BoxFit.cover,
+                    Stack(
+                      children: [
+                        SizedBox(
+                          height: he(182),
+                          width: context.w,
+                          child: ClipRRect(
+                            borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(11),
+                                topRight: Radius.circular(11)),
+                            child: CachedNetworkImage(
+                              imageUrl:
+                                  "https://www.wantedshop.ru/upload/iblock/b8a/b8abee5262b651f1c0cfd66ba7ac1238.jpg",
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                         ),
-                      ),
+                        Positioned(
+                          top: 10,
+                          right: 10,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: AppColors.instance.black.withOpacity(0.3),
+                              borderRadius: const BorderRadius.all(
+                                Radius.circular(6),
+                              ),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(4),
+                              child: BlocProvider(
+                                create: (context) => FavoriteCubit(),
+                                child:
+                                    BlocConsumer<FavoriteCubit, FavoriteState>(
+                                  listener: (context, state) {},
+                                  builder: (context, state) {
+                                    return favorite(context);
+                                  },
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                     Padding(
                       padding: EdgeInsets.symmetric(
@@ -110,6 +142,21 @@ class _HomeState extends State<Home> {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  GestureDetector favorite(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        context.read<FavoriteCubit>().favoriteCheck();
+      },
+      child: SvgPicture.asset(
+        context.watch<FavoriteCubit>().state.favorite == false
+            ? 'assets/svg/ic_flike_false.svg'
+            : "assets/svg/ic_like_trou.svg",
+        height: he(20),
+        width: wi(20),
       ),
     );
   }
