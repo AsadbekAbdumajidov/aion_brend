@@ -15,7 +15,7 @@ class Explore extends StatelessWidget {
             style: AppTextStyles.instance.styleW400S17Black),
       ),
       body: GridView.builder(
-          padding: EdgeInsets.symmetric(horizontal: wi(16),vertical: he(10)),
+          padding: EdgeInsets.symmetric(horizontal: wi(16), vertical: he(10)),
           scrollDirection: Axis.vertical,
           shrinkWrap: true,
           itemCount: 25,
@@ -27,20 +27,24 @@ class Explore extends StatelessWidget {
             crossAxisCount: 3,
           ),
           itemBuilder: (_, __) => Container(
-                decoration: BoxDecoration(
-                    color: AppColors.instance.white,
-                    borderRadius: const BorderRadius.all(Radius.circular(11))),
-                child: Column(
-                  children: [
-                    CachedNetworkImage(
-                      imageUrl:
-                          "https://printc12.com.ua/wp-content/uploads/2021/08/shapkah.png",
-                      height: he(81),
-                      width: wi(81),
+                  decoration: BoxDecoration(
+                      color: AppColors.instance.white,
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(11))),
+                  child: Column(
+                      children: [
+                        CachedNetworkImage(
+                          imageUrl:
+                              "https://printc12.com.ua/wp-content/uploads/2021/08/shapkah.png",
+                          height: he(81),
+                          width: wi(81),
+                        ),
+                        Text(
+                          "Shapkalar",
+                          style: AppTextStyles.instance.styleW500S13Black,
+                        ),
+                      ],
                     ),
-                    Text("Shapkalar",style: AppTextStyles.instance.styleW500S13Black,),
-                  ],
-                ),
               )),
     );
   }

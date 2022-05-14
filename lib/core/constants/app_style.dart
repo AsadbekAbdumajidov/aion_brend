@@ -7,6 +7,19 @@ class AppTextStyles {
   static AppTextStyles get instance => _instance;
   AppTextStyles._inint();
 
+   TextStyle styleW500S18Black = TextStyle(
+      color: AppColors.instance.black,
+      fontSize: he(18),
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal);
+
+TextStyle styleW500S16White = TextStyle(
+      color: AppColors.instance.white,
+      fontSize: he(16),
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal);
+
+
   TextStyle styleW400S17Black = TextStyle(
       color: AppColors.instance.black,
       fontSize: he(17),
@@ -19,6 +32,8 @@ class AppTextStyles {
     fontSize: he(15),
     fontWeight: FontWeight.w400,
   );
+
+  
 
   TextStyle styleW500S12Black = TextStyle(
     color: AppColors.instance.black,
@@ -36,6 +51,13 @@ class AppTextStyles {
       fontSize: he(15),
       fontWeight: FontWeight.w600,
       fontStyle: FontStyle.normal);
+
+  TextStyle styleW700S15Blue = TextStyle(
+      color: AppColors.instance.blue,
+      fontSize: he(15),
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal);
+
 
   TextStyle styleW600S14Black = TextStyle(
     color: AppColors.instance.black,
