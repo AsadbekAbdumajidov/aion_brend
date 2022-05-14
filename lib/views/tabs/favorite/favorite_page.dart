@@ -51,7 +51,7 @@ class Favorite extends StatelessWidget {
                             topRight: Radius.circular(11)),
                         child: CachedNetworkImage(
                           imageUrl:
-                              "https://www.wantedshop.ru/upload/iblock/b8a/b8abee5262b651f1c0cfd66ba7ac1238.jpg",
+                              "https://telegra.ph/file/973497445e7733ba43221.jpg",
                           fit: BoxFit.cover,
                         ),
                       ),

@@ -1,5 +1,6 @@
 import 'package:aion/core/components/nav_bar.dart';
 import 'package:aion/core/router/app_routes.dart';
+import 'package:aion/views/descripton/descripton_page.dart';
 import 'package:flutter/material.dart';
 
 class Routes {
@@ -9,10 +10,11 @@ class Routes {
   Routes._inint();
 
   Route? generateRoue(RouteSettings settings) {
-    // var args = settings.arguments;
     switch (settings.name) {
       case AppRoutes.navBar:
         return simpleRoute(const NavBar());
+      case AppRoutes.descripton:
+        return simpleRoute(const DescriptonPage());
     }
     return null;
   }

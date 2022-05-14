@@ -1,4 +1,5 @@
 import 'package:aion/core/constants/app_colors.dart';
+import 'package:aion/core/utils/size_konfig.dart';
 import 'package:flutter/material.dart';
 
 class AppDecoration {
@@ -14,4 +15,13 @@ class AppDecoration {
     color: AppColors.instance.white,
     borderRadius: const BorderRadius.all(Radius.circular(13)),
   );
+
+  BoxDecoration decorationBorderPrimaryRadius6 = BoxDecoration(
+      border: Border.all(width: wi(2), color: AppColors.instance.primarColor),
+      color: AppColors.instance.white,
+      borderRadius: const BorderRadius.all(Radius.circular(6)));
+
+  BoxDecoration decorationColorWhiteRadius14 = BoxDecoration(
+      color: AppColors.instance.white,
+      borderRadius: const BorderRadius.all(Radius.circular(14)));
 }

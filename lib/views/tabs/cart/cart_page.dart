@@ -38,8 +38,7 @@ class Cart extends StatelessWidget {
             SizedBox(
               height: he(567),
               child: ListView.builder(
-                  itemCount: 5
-                  ,
+                  itemCount: 5,
                   physics: const BouncingScrollPhysics(),
                   padding: EdgeInsets.only(top: he(10)),
                   itemBuilder: (_, __) {
@@ -176,8 +175,8 @@ class Cart extends StatelessWidget {
       },
       child: SvgPicture.asset(
         context.watch<CheckBoxCubit>().state.check == false
-            ? 'assets/svg/ic_false_elips.svg'
-            : "assets/svg/ic_true_elips.svg",
+            ? AppIcons.instance.icElipsFalse
+            : AppIcons.instance.icElipsTrue,
         height: he(20),
         width: wi(20),
       ),

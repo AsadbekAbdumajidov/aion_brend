@@ -14,4 +14,8 @@ class AppIcons {
   String icSearchField = "assets/svg/ic_search_field.svg";
   String icProfile = "assets/svg/profile.svg";
   String icFlag = "assets/svg/ic_flag.svg";
+  String icLikeFalse = "assets/svg/ic_flike_false.svg";
+  String icLikeTrue = "assets/svg/ic_like_trou.svg";
+  String icElipsFalse = "assets/svg/ic_false_elips.svg";
+  String icElipsTrue = "assets/svg/ic_true_elips.svg";
 }
