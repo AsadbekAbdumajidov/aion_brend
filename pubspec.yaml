@@ -34,6 +34,7 @@ dependencies:
   slide_countdown: ^0.2.4
   # imgni cached qilish uchun
   cached_network_image: ^3.2.0
+  url_launcher: ^6.1.2
 
 dev_dependencies:
   flutter_test:

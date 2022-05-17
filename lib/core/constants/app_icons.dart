@@ -18,4 +18,8 @@ class AppIcons {
   String icLikeTrue = "assets/svg/ic_like_trou.svg";
   String icElipsFalse = "assets/svg/ic_false_elips.svg";
   String icElipsTrue = "assets/svg/ic_true_elips.svg";
+  String icUser = "assets/svg/ic_user.svg";
+  String icMap = "assets/svg/ic_map_pin.svg";
+  String icBell = "assets/svg/ic_bell.svg";
+  String icInfo = "assets/svg/ic_info.svg";
 }

@@ -27,6 +27,7 @@ final appThemeData = ThemeData(
     unselectedItemColor: AppColors.instance.black,
     selectedItemColor: AppColors.instance.primarColor,
   ),
+  
   backgroundColor: AppColors.instance.backGround,
   scaffoldBackgroundColor: AppColors.instance.backGround,
   cupertinoOverrideTheme: const CupertinoThemeData(brightness: Brightness.dark),

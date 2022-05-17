@@ -32,6 +32,12 @@ class AppTextStyles {
     fontWeight: FontWeight.w400,
   );
 
+  TextStyle styleW400S15BlackOpacity04= TextStyle(
+    color: AppColors.instance.black.withOpacity(0.4),
+    fontSize: he(15),
+    fontWeight: FontWeight.w400,
+  );
+
   TextStyle styleW500S14Black = TextStyle(
     color: AppColors.instance.black,
     fontSize: he(14),
