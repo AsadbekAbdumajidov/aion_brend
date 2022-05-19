@@ -22,4 +22,8 @@ class AppIcons {
   String icMap = "assets/svg/ic_map_pin.svg";
   String icBell = "assets/svg/ic_bell.svg";
   String icInfo = "assets/svg/ic_info.svg";
+  String icShop = "assets/svg/ic_shop_bag.svg";
+  String icCreditCart = "assets/svg/ic_credit_cart.svg";
+  String icMail = "assets/svg/ic_mail.svg";
+  String icSetting = "assets/svg/ic_settings.svg";
 }
