@@ -7,7 +7,9 @@ class TitleWidget extends StatelessWidget {
   final Function() onTap;
   final String title;
   final String icon;
-  const TitleWidget({Key? key,required this.onTap,required this.title,required this.icon}) : super(key: key);
+  const TitleWidget(
+      {Key? key, required this.onTap, required this.title, required this.icon})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

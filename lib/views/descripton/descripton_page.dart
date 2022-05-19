@@ -6,6 +6,8 @@ import 'package:aion/core/constants/app_style.dart';
 import 'package:aion/core/extension/for_context.dart';
 import 'package:aion/core/router/app_routes.dart';
 import 'package:aion/core/utils/size_konfig.dart';
+import 'package:aion/cubit/descripton_count/descripton_count_cubit.dart';
+import 'package:aion/cubit/descripton_count/descripton_count_state.dart';
 import 'package:aion/cubit/favorite/favorite_cubit.dart';
 import 'package:aion/cubit/favorite/favorite_state.dart';
 import 'package:aion/views/descripton/widgets/app_bar_widget.dart';
@@ -53,17 +55,14 @@ class DescriptonPage extends StatelessWidget {
                 sizeBuilder(context),
                 Text("Donasini kiriting",
                     style: AppTextStyles.instance.stylew500S20Black),
-                Padding(
-                  padding: EdgeInsets.only(top: he(13), bottom: he(20)),
-                  child: Row(
-                    children: [
-                      CountforContainer("-", () {}),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: wi(10)),
-                        child: CountforContainer("1", () {}),
-                      ),
-                      CountforContainer("+", () {}),
-                    ],
+                BlocProvider(
+                  create: (context) => DescriptonCountCubit(),
+                  child:
+                      BlocConsumer<DescriptonCountCubit, DescriptonCountState>(
+                    listener: (context, state) {},
+                    builder: (context, state) {
+                      return countMethod(context);
+                    },
                   ),
                 ),
                 Row(
@@ -84,7 +83,7 @@ class DescriptonPage extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Dostavka",
+                        Text("Yetkazib berish",
                             style: AppTextStyles.instance.styleW600S15Black),
                         Text("15 kundan 20 kungacha yetkazib beriladi",
                             style: AppTextStyles.instance.styleW500S13Black),
@@ -142,6 +141,30 @@ class DescriptonPage extends StatelessWidget {
       ),
     );
   }
+
+// Count Method
+  Padding countMethod(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(top: he(13), bottom: he(20)),
+      child: Row(
+        children: [
+          CountforContainer("-", () {
+            context.read<DescriptonCountCubit>().countRemove();
+          }),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: wi(10)),
+            child: CountforContainer(
+                context.watch<DescriptonCountCubit>().state.count.toString(),
+                () {}),
+          ),
+          CountforContainer("+", () {
+            context.read<DescriptonCountCubit>().countAdd();
+          }),
+        ],
+      ),
+    );
+  }
+
 // Ohshash mahsulotlar uchun builder
   GridView oxshashMahsulotlar(BuildContext context) {
     return GridView.builder(

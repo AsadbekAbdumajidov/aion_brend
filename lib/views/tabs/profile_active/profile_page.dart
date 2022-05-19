@@ -52,7 +52,7 @@ class ProfileActive extends StatelessWidget {
                         AppDecoration.instance.decorationColorWhiteRadius14,
                     child: Padding(
                       padding: EdgeInsets.symmetric(
-                          horizontal: wi(22), vertical: he(10)),
+                          horizontal: wi(22), vertical: he(4)),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
