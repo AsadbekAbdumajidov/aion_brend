@@ -1,6 +1,7 @@
 import 'package:aion/core/constants/app_decoration.dart';
 import 'package:aion/core/constants/app_icons.dart';
 import 'package:aion/core/constants/app_style.dart';
+import 'package:aion/core/router/app_routes.dart';
 import 'package:aion/core/utils/size_konfig.dart';
 import 'package:aion/views/tabs/profile_active/_widget/title_button_widget.dart';
 import 'package:aion/views/tabs/profile_passive/_widget/text_button_widget.dart';
@@ -57,7 +58,10 @@ class ProfileActive extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           TitleWidget(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.pushNamed(
+                                    context, AppRoutes.location);
+                              },
                               title: "Yetkazib berish manzili",
                               icon: AppIcons.instance.icMap),
                           TitleWidget(

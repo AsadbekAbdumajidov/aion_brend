@@ -26,4 +26,6 @@ class AppIcons {
   String icCreditCart = "assets/svg/ic_credit_cart.svg";
   String icMail = "assets/svg/ic_mail.svg";
   String icSetting = "assets/svg/ic_settings.svg";
+  String icDostavkaUpdate = "assets/svg/ic_dostavka_update.svg";
+  String icDostavkaAdd = "assets/svg/ic_dostavka_add.svg";
 }

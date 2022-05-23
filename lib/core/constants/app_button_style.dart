@@ -18,6 +18,7 @@ class AppButtonStyle {
     ),
   );
 
+
   ButtonStyle buttonStyleRadius18WhiteW110H54 = OutlinedButton.styleFrom(
     fixedSize: Size(wi(110), he(54)),
     backgroundColor: AppColors.instance.white,

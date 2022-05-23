@@ -26,13 +26,19 @@ class AppTextStyles {
       fontFamily: "Mer",
       fontStyle: FontStyle.normal);
 
+  TextStyle styleW400S17BlackWith04 = TextStyle(
+      color: AppColors.instance.black.withOpacity(0.4),
+      fontSize: he(17),
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal);
+
   TextStyle styleW400S15Black = TextStyle(
     color: AppColors.instance.black,
     fontSize: he(15),
     fontWeight: FontWeight.w400,
   );
 
-  TextStyle styleW400S15BlackOpacity04= TextStyle(
+  TextStyle styleW400S15BlackOpacity04 = TextStyle(
     color: AppColors.instance.black.withOpacity(0.4),
     fontSize: he(15),
     fontWeight: FontWeight.w400,
@@ -59,6 +65,12 @@ class AppTextStyles {
       color: AppColors.instance.black,
       fontSize: he(15),
       fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.normal);
+
+  TextStyle styleW700S18Black = TextStyle(
+      color: AppColors.instance.black,
+      fontSize: he(18),
+      fontWeight: FontWeight.w700,
       fontStyle: FontStyle.normal);
 
   TextStyle styleW700S15Blue = TextStyle(
