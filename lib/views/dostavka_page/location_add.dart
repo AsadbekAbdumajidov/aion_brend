@@ -1,18 +1,20 @@
 import 'package:aion/core/constants/app_icons.dart';
+import 'package:aion/core/constants/app_style.dart';
 import 'package:aion/core/utils/size_konfig.dart';
 import 'package:aion/core/widgets/little_button/ilitten_button.dart';
 import 'package:aion/core/widgets/profile_app_bar/profile_app_bar.dart';
-import 'package:aion/views/dostavka_page/_widget/container_field.dart';
+import 'package:aion/core/widgets/text_form_field/text_form_field.dart';
 import 'package:flutter/material.dart';
 
 class LocationAdd extends StatelessWidget {
-  LocationAdd({Key? key}) : super(key: key);
-  TextEditingController shahar = TextEditingController();
-  TextEditingController viloyat = TextEditingController();
-  TextEditingController manzil = TextEditingController();
+  const LocationAdd({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController shahar = TextEditingController();
+    TextEditingController viloyat = TextEditingController();
+    TextEditingController manzil = TextEditingController();
+
     return Scaffold(
       appBar: ProfileAppBar(
           title: "Yetkazib berish manzilini kiriting",
@@ -21,28 +23,54 @@ class LocationAdd extends StatelessWidget {
             Navigator.pop(context);
           }).getBar(context),
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Column(
-              children: [
-                ContainerField(
-                    hintText: "Shaharingizni kiriting", controller: shahar),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: he(5)),
-                  child: ContainerField(
-                      hintText: "Viloyatingizni kiriting", controller: viloyat),
-                ),
-                ContainerField(
-                    hintText: "Uy manzilingizni kiriting", controller: manzil),
-              ],
-            ),
-            Padding(
-              padding: EdgeInsets.only(right: wi(16), bottom: he(20)),
-              child: LittelButton(title: "Saqlash", onTap: () {}),
-            ),
-          ],
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: wi(16)),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(top: he(16), bottom: he(10)),
+                    child: Text("Shaharingizni kiriting",
+                        style: AppTextStyles.instance.styleW400S15Black),
+                  ),
+                  CustomTextField(
+                      onChange: (v) {},
+                      hintText: "Shahar",
+                      textEditingController: shahar),
+                  Padding(
+                    padding: EdgeInsets.only(top: he(16), bottom: he(10)),
+                    child: Text("Viloyatingizni kiriting",
+                        style: AppTextStyles.instance.styleW400S15Black),
+                  ),
+                  CustomTextField(
+                      onChange: (v) {},
+                      hintText: "Viloyat",
+                      textEditingController: viloyat),
+                  Padding(
+                    padding: EdgeInsets.only(top: he(16), bottom: he(10)),
+                    child: Text("Manzilingizni kiriting",
+                        style: AppTextStyles.instance.styleW400S15Black),
+                  ),
+                  CustomTextField(
+                      onChange: (v) {},
+                      hintText: "Manzil",
+                      textEditingController: manzil),
+                  SizedBox(height: he(16)),
+                  Text(
+                      "Buyurtmangiz yetkizilishi kerak bo'lgan manzlni kiriting !",
+                      style: AppTextStyles.instance.styleW500S13BlackWith05)
+                ],
+              ),
+              Padding(
+                padding: EdgeInsets.only(bottom: he(20)),
+                child: LittelButton(title: "Saqlash", onTap: () {}),
+              ),
+            ],
+          ),
         ),
       ),
     );
