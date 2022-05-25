@@ -3,6 +3,7 @@ import 'package:aion/core/router/app_routes.dart';
 import 'package:aion/views/descripton/descripton_page.dart';
 import 'package:aion/views/dostavka_page/location.dart';
 import 'package:aion/views/dostavka_page/location_add.dart';
+import 'package:aion/views/notification/notification.dart';
 import 'package:flutter/material.dart';
 
 class Routes {
@@ -19,8 +20,10 @@ class Routes {
         return simpleRoute(const DescriptonPage());
       case AppRoutes.location:
         return simpleRoute(const Location());
-        case AppRoutes.locationAdd:
-        return simpleRoute( LocationAdd());
+      case AppRoutes.locationAdd:
+        return simpleRoute(const LocationAdd());
+        case AppRoutes.notif:
+        return simpleRoute(const NotificationPage());
     }
     return null;
   }

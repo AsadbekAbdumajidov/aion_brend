@@ -3,6 +3,7 @@ class AppRoutes {
   static const navBar = '/navBar';
   static const descripton = "/des";
   static const location = "/location";
-   static const locationAdd = "/locationAdd";
-    static const locationUpdate = "/locationUpdate";
+  static const locationAdd = "/locationAdd";
+  static const locationUpdate = "/locationUpdate";
+  static const notif = "/notif";
 }

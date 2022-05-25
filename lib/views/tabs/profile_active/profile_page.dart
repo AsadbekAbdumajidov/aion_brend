@@ -65,7 +65,9 @@ class ProfileActive extends StatelessWidget {
                               title: "Yetkazib berish manzili",
                               icon: AppIcons.instance.icMap),
                           TitleWidget(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.pushNamed(context, AppRoutes.notif);
+                              },
                               title: "Yangiliklarni kuzatib borish",
                               icon: AppIcons.instance.icBell),
                           TitleWidget(
