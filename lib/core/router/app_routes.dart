@@ -8,4 +8,5 @@ class AppRoutes {
   static const notif = "/notif";
   static const connection = "/connection";
   static const about = "/about";
+  static const setting = "/setting";
 }

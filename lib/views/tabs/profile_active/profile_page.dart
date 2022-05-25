@@ -86,7 +86,9 @@ class ProfileActive extends StatelessWidget {
                               title: "Bog’lanish",
                               icon: AppIcons.instance.icMail),
                           TitleWidget(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.pushNamed(context, AppRoutes.setting);
+                              },
                               title: "Sozlamalar",
                               icon: AppIcons.instance.icSetting),
                           TitleWidget(

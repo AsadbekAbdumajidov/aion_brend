@@ -40,6 +40,7 @@ class LocationAdd extends StatelessWidget {
                   CustomTextField(
                       onChange: (v) {},
                       hintText: "Shahar",
+                      prefixIcon:const Icon(Icons.location_city),
                       textEditingController: shahar),
                   Padding(
                     padding: EdgeInsets.only(top: he(16), bottom: he(10)),
@@ -49,6 +50,7 @@ class LocationAdd extends StatelessWidget {
                   CustomTextField(
                       onChange: (v) {},
                       hintText: "Viloyat",
+                      prefixIcon: const Icon(Icons.home_filled),
                       textEditingController: viloyat),
                   Padding(
                     padding: EdgeInsets.only(top: he(16), bottom: he(10)),
@@ -58,6 +60,7 @@ class LocationAdd extends StatelessWidget {
                   CustomTextField(
                       onChange: (v) {},
                       hintText: "Manzil",
+                      prefixIcon:const Icon(Icons.edit_location_outlined),
                       textEditingController: manzil),
                   SizedBox(height: he(16)),
                   Text(

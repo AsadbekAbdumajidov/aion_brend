@@ -19,12 +19,13 @@ class CustomTextField extends StatelessWidget {
     this.initialValue,
     this.preIconColor,
     this.textEditingController,
+    this.keyboardType
   }) : super(key: key);
 
   final TextEditingController? textEditingController;
   final Function(String value) onChange;
   final String hintText;
-  final IconData? prefixIcon;
+  final Icon? prefixIcon;
   final Widget? suffixIcon;
   final bool? obscure;
   final TextInputAction? textInputAction;
@@ -32,6 +33,7 @@ class CustomTextField extends StatelessWidget {
   final Color? preIconColor;
   final String? initialValue;
   FormFieldValidator<String>? validator;
+  final TextInputType? keyboardType;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -42,11 +44,12 @@ class CustomTextField extends StatelessWidget {
       textInputAction: textInputAction,
       onChanged: onChange,
       controller: textEditingController,
+      keyboardType: keyboardType,
       cursorColor: AppColors.instance.blue,
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(horizontal: wi(16)),
         suffixIcon: suffixIcon,
-        prefixIcon:const Icon(Icons.edit_outlined),
+        prefixIcon:prefixIcon,
         hintStyle: AppTextStyles.instance.styleW400S15BlackOpacity04,
         hintText: hintText,
         filled: true,
