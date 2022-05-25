@@ -1,5 +1,6 @@
 import 'package:aion/core/components/nav_bar.dart';
 import 'package:aion/core/router/app_routes.dart';
+import 'package:aion/views/connection/connection_page.dart';
 import 'package:aion/views/descripton/descripton_page.dart';
 import 'package:aion/views/dostavka_page/location.dart';
 import 'package:aion/views/dostavka_page/location_add.dart';
@@ -22,8 +23,10 @@ class Routes {
         return simpleRoute(const Location());
       case AppRoutes.locationAdd:
         return simpleRoute(const LocationAdd());
-        case AppRoutes.notif:
+      case AppRoutes.notif:
         return simpleRoute(const NotificationPage());
+        case AppRoutes.connection:
+        return simpleRoute(const Connection());
     }
     return null;
   }

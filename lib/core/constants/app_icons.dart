@@ -28,4 +28,8 @@ class AppIcons {
   String icSetting = "assets/svg/ic_settings.svg";
   String icDostavkaUpdate = "assets/svg/ic_dostavka_update.svg";
   String icDostavkaAdd = "assets/svg/ic_dostavka_add.svg";
+  String icPhone = "assets/svg/isPhone.svg";
+  String icMessage = "assets/svg/isMessage.svg";
+  String icSend = "assets/svg/icSend.svg";
+
 }

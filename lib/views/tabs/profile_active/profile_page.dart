@@ -79,7 +79,10 @@ class ProfileActive extends StatelessWidget {
                               title: "karta qo’shish",
                               icon: AppIcons.instance.icCreditCart),
                           TitleWidget(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.pushNamed(
+                                    context, AppRoutes.connection);
+                              },
                               title: "Bog’lanish",
                               icon: AppIcons.instance.icMail),
                           TitleWidget(

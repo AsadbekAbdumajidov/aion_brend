@@ -6,4 +6,5 @@ class AppRoutes {
   static const locationAdd = "/locationAdd";
   static const locationUpdate = "/locationUpdate";
   static const notif = "/notif";
+  static const connection = "/connection";
 }
