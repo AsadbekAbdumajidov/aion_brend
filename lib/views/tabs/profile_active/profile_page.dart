@@ -90,7 +90,9 @@ class ProfileActive extends StatelessWidget {
                               title: "Sozlamalar",
                               icon: AppIcons.instance.icSetting),
                           TitleWidget(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.pushNamed(context, AppRoutes.about);
+                              },
                               title: "Biz haqimizda",
                               icon: AppIcons.instance.icInfo),
                         ],
