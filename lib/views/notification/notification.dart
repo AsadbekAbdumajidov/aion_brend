@@ -4,7 +4,6 @@ import 'package:aion/core/constants/app_style.dart';
 import 'package:aion/core/utils/size_konfig.dart';
 import 'package:aion/core/widgets/little_button/ilitten_button.dart';
 import 'package:aion/core/widgets/profile_app_bar/profile_app_bar.dart';
-import 'package:aion/views/tabs/profile_active/_widget/title_button_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

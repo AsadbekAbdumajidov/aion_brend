@@ -6,14 +6,17 @@ class ProfileAppBar {
   String title;
   String leftIcon;
   Function()? leftOntap;
-
+PreferredSizeWidget? bottom;
   ProfileAppBar({
     required this.title,
     required this.leftIcon,
     this.leftOntap,
+    this.bottom
   });
   getBar(context) {
     return AppBar(
+      
+      bottom: bottom,
       title: Text(title, style: AppTextStyles.instance.styleW400S15Black),
       leading: IconButton(
         splashRadius: 20,

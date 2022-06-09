@@ -1,4 +1,3 @@
-import 'package:aion/core/constants/app_colors.dart';
 import 'package:aion/core/constants/app_decoration.dart';
 import 'package:aion/core/constants/app_icons.dart';
 import 'package:aion/core/constants/app_style.dart';
@@ -60,7 +59,7 @@ class SettingPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: EdgeInsets.only(top: he(16), bottom: he(10)),
+                          padding: EdgeInsets.only(top: he(10), bottom: he(10)),
                           child: Text("Ism ",
                               style: AppTextStyles.instance.styleW400S15Black),
                         ),

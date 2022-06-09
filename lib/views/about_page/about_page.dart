@@ -3,7 +3,6 @@ import 'package:aion/core/constants/app_style.dart';
 import 'package:aion/core/utils/size_konfig.dart';
 import 'package:aion/core/widgets/profile_app_bar/profile_app_bar.dart';
 import 'package:aion/service/url_service.dart';
-import 'package:aion/views/tabs/profile_passive/_widget/text_button_widget.dart';
 import 'package:flutter/material.dart';
 
 class AboutPage extends StatelessWidget {

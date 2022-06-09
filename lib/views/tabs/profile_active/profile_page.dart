@@ -71,7 +71,9 @@ class ProfileActive extends StatelessWidget {
                               title: "Yangiliklarni kuzatib borish",
                               icon: AppIcons.instance.icBell),
                           TitleWidget(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.pushNamed(context, AppRoutes.order);
+                              },
                               title: "Mening zakazlarim",
                               icon: AppIcons.instance.icShop),
                           TitleWidget(

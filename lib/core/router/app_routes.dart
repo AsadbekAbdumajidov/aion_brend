@@ -9,4 +9,5 @@ class AppRoutes {
   static const connection = "/connection";
   static const about = "/about";
   static const setting = "/setting";
+  static const order = "/order";
 }

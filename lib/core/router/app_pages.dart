@@ -6,6 +6,7 @@ import 'package:aion/views/descripton/descripton_page.dart';
 import 'package:aion/views/dostavka_page/location.dart';
 import 'package:aion/views/dostavka_page/location_add.dart';
 import 'package:aion/views/notification/notification.dart';
+import 'package:aion/views/orders/orders_page.dart';
 import 'package:aion/views/setting_page/setting_page.dart';
 import 'package:flutter/material.dart';
 
@@ -31,8 +32,10 @@ class Routes {
         return simpleRoute(const Connection());
       case AppRoutes.about:
         return simpleRoute(const AboutPage());
-        case AppRoutes.setting:
+      case AppRoutes.setting:
         return simpleRoute(const SettingPage());
+        case AppRoutes.order:
+        return simpleRoute(const OrdersPage());
     }
     return null;
   }

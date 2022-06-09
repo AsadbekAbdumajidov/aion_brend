@@ -10,8 +10,10 @@ class LittelButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        style: AppButtonStyle.instance.buttonStyleBorder8ColorPrimary,
+        style: AppButtonStyle.instance.buttonStyleBorder8ColorPrimaryHe42Wi147,
         onPressed: onTap,
         child: Text(title, style: AppTextStyles.instance.styleW500S16White));
   }
 }
+
+

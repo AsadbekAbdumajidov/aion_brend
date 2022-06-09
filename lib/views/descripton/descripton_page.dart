@@ -120,7 +120,7 @@ class DescriptonPage extends StatelessWidget {
                               style: AppTextStyles.instance.stylew500S20Black),
                           ElevatedButton(
                             style: AppButtonStyle
-                                .instance.buttonStyleBorder8ColorPrimary,
+                                .instance.buttonStyleBorder8ColorPrimaryHe42Wi147,
                             onPressed: () {},
                             child: Text("Savatga qo’shish",
                                 style:

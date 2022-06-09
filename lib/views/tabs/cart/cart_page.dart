@@ -8,7 +8,6 @@ import 'package:aion/cubit/cart_count/cart_count_cubit.dart';
 import 'package:aion/cubit/cart_count/cart_count_state.dart';
 import 'package:aion/cubit/chech_box/chech_box_cubit.dart';
 import 'package:aion/cubit/chech_box/chech_box_state.dart';
-import 'package:aion/cubit/descripton_count/descripton_count_state.dart';
 import 'package:aion/views/tabs/cart/widgets/count_container.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -153,7 +152,7 @@ class Cart extends StatelessWidget {
                   ),
                   ElevatedButton(
                       style: AppButtonStyle
-                          .instance.buttonStyleBorder8ColorPrimary,
+                          .instance.buttonStyleBorder8ColorPrimaryHe42Wi147,
                       onPressed: () {},
                       child: Text(
                         "Buyurtma berish",
