@@ -55,7 +55,7 @@ class OnTheWay extends StatelessWidget {
                               Text("Miqdori:",
                                   style: AppTextStyles
                                       .instance.styleW400S15BlackOpacity04),
-                              Text("3",
+                              Text("$__",
                                   style:
                                       AppTextStyles.instance.styleW600S15Black),
                             ],

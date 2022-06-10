@@ -1,6 +1,7 @@
 import 'package:aion/core/components/nav_bar.dart';
 import 'package:aion/core/router/app_routes.dart';
 import 'package:aion/views/about_page/about_page.dart';
+import 'package:aion/views/card_add/card_add_page.dart';
 import 'package:aion/views/connection_page/connection_page.dart';
 import 'package:aion/views/descripton/descripton_page.dart';
 import 'package:aion/views/dostavka_page/location.dart';
@@ -34,8 +35,10 @@ class Routes {
         return simpleRoute(const AboutPage());
       case AppRoutes.setting:
         return simpleRoute(const SettingPage());
-        case AppRoutes.order:
+      case AppRoutes.order:
         return simpleRoute(const OrdersPage());
+      case AppRoutes.cardAdd:
+        return simpleRoute(const CardAdd());
     }
     return null;
   }

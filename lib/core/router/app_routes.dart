@@ -1,3 +1,4 @@
+
 class AppRoutes {
   static const splash = '/';
   static const navBar = '/navBar';
@@ -10,4 +11,5 @@ class AppRoutes {
   static const about = "/about";
   static const setting = "/setting";
   static const order = "/order";
+  static const cardAdd = "/cardAdd";
 }

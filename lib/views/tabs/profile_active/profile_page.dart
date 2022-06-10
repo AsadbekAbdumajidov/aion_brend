@@ -18,8 +18,7 @@ class ProfileActive extends StatelessWidget {
           title: Text("Meni Kabinetim",
               style: AppTextStyles.instance.styleW400S17Black),
         ),
-        body: SafeArea(
-            child: Padding(
+        body: Padding(
           padding: EdgeInsets.symmetric(horizontal: wi(18)),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -77,7 +76,9 @@ class ProfileActive extends StatelessWidget {
                               title: "Mening zakazlarim",
                               icon: AppIcons.instance.icShop),
                           TitleWidget(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.pushNamed(context, AppRoutes.cardAdd);
+                              },
                               title: "karta qo’shish",
                               icon: AppIcons.instance.icCreditCart),
                           TitleWidget(
@@ -118,6 +119,6 @@ class ProfileActive extends StatelessWidget {
               ),
             ],
           ),
-        )));
+        ));
   }
 }
