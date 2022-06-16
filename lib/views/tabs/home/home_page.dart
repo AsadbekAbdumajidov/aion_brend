@@ -83,7 +83,7 @@ class _HomeState extends State<Home> {
                                   topRight: Radius.circular(11)),
                               child: CachedNetworkImage(
                                 imageUrl:
-                                    "https://www.wantedshop.ru/upload/iblock/b8a/b8abee5262b651f1c0cfd66ba7ac1238.jpg",
+                                    "https://hector.ua/ssd/storage/static/img/catalog/hector-2022/futbolka/patriot/40181/550x780_40181%20ua%20(1).jpg",
                                 fit: BoxFit.cover,
                               ),
                             ),

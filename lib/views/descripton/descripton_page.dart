@@ -1,4 +1,5 @@
 import 'package:aion/core/components/app_bar.dart';
+import 'package:aion/core/constants/app_colors.dart';
 import 'package:aion/core/constants/app_decoration.dart';
 import 'package:aion/core/constants/app_icons.dart';
 import 'package:aion/core/constants/app_style.dart';
@@ -10,13 +11,26 @@ import 'package:aion/views/descripton/widgets/foto_builder_widget.dart';
 import 'package:aion/views/descripton/widgets/similar_builder_widget.dart';
 import 'package:aion/views/descripton/widgets/size_builder_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class DescriptonPage extends StatelessWidget {
+class DescriptonPage extends StatefulWidget {
   const DescriptonPage({Key? key}) : super(key: key);
 
+  @override
+  State<DescriptonPage> createState() => _DescriptonPageState();
+}
+
+class _DescriptonPageState extends State<DescriptonPage> {
+  int _current = 0;
+  List img = [
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ba/29/5c/img-worlds-of-adventure.jpg?w=1200&h=-1&s=1",
+    "https://media-cdn.tripadvisor.com/media/photo-s/15/a4/9b/77/legacy-hotel-at-img-academy.jpg",
+    "https://dubaitrippackages.files.wordpress.com/2017/11/2-imgdinosaurs_base.jpg"
+  ];
+  final CarouselController _controller = CarouselController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,22 +48,69 @@ class DescriptonPage extends StatelessWidget {
             ListView(
               padding: EdgeInsets.symmetric(horizontal: wi(16)),
               children: [
-                Padding(
-                  padding: EdgeInsets.only(top: he(20), bottom: he(10)),
-                  child: ClipRRect(
-                    borderRadius: const BorderRadius.all(Radius.circular(20)),
-                    child: CachedNetworkImage(
-                      imageUrl:
-                          "https://www.wantedshop.ru/upload/iblock/b8a/b8abee5262b651f1c0cfd66ba7ac1238.jpg",
-                      fit: BoxFit.cover,
-                      height: he(251),
-                      width: wi(340),
+                Stack(
+                  children: [
+                    CarouselSlider(
+                      carouselController: _controller,
+                      options: CarouselOptions(
+                          height: he(251),
+                          viewportFraction: 1.0,
+                          initialPage: 0,
+                          enableInfiniteScroll: false,
+                          reverse: false,
+                          onPageChanged: (index, reason) {
+                            setState(() {
+                              _current = index;
+                            });
+                          },
+                          autoPlay: false),
+                      items: img.map((portfolio) {
+                        return Builder(
+                          builder: (BuildContext context) {
+                            return ClipRRect(
+                              borderRadius: BorderRadius.circular(16),
+                              child: CachedNetworkImage(
+                                width: MediaQuery.of(context).size.width - 32,
+                                height: MediaQuery.of(context).size.width - 22,
+                                fit: BoxFit.cover,
+                                imageUrl: portfolio ?? "",
+                              ),
+                            );
+                          },
+                        );
+                      }).toList(),
                     ),
-                  ),
+                    Positioned(
+                      bottom: 12,
+                      left: 0,
+                      right: 0,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: img.asMap().entries.map((entry) {
+                          return GestureDetector(
+                            onTap: () => _controller.animateToPage(entry.key),
+                            child: Container(
+                              width: 8.0,
+                              height: 8.0,
+                              margin:
+                                  const EdgeInsets.symmetric(horizontal: 4.0),
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: _current == entry.key
+                                      ? AppColors.instance.white
+                                      : AppColors.instance.white
+                                          .withOpacity(0.4)),
+                            ),
+                          );
+                        }).toList(),
+                      ),
+                    ),
+                  ],
                 ),
+                SizedBox(height: he(10)),
                 Text("Rangini tanlang",
                     style: AppTextStyles.instance.stylew500S20Black),
-                const FotoBuilderWidget(),
+                FotoBuilderWidget(imgList: img, selectedIndex: _current),
                 Text("Razmerini tanlang",
                     style: AppTextStyles.instance.stylew500S20Black),
                 const SizeBuilderWidget(),
