@@ -8,7 +8,9 @@ import 'package:aion/views/dostavka_page/location.dart';
 import 'package:aion/views/dostavka_page/location_add.dart';
 import 'package:aion/views/notification/notification.dart';
 import 'package:aion/views/orders/orders_page.dart';
+import 'package:aion/views/search/search_page.dart';
 import 'package:aion/views/setting_page/setting_page.dart';
+import 'package:aion/views/subcategory/subcategory.dart';
 import 'package:flutter/material.dart';
 
 class Routes {
@@ -39,6 +41,10 @@ class Routes {
         return simpleRoute(const OrdersPage());
       case AppRoutes.cardAdd:
         return simpleRoute(const CardAdd());
+      case AppRoutes.search:
+        return simpleRoute(SearchPage());
+      case AppRoutes.subcategory:
+        return simpleRoute(const Subcategory());
     }
     return null;
   }

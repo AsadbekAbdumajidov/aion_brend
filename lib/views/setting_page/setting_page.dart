@@ -1,9 +1,8 @@
+import 'package:aion/core/components/app_bar.dart';
 import 'package:aion/core/constants/app_decoration.dart';
-import 'package:aion/core/constants/app_icons.dart';
 import 'package:aion/core/constants/app_style.dart';
 import 'package:aion/core/utils/size_konfig.dart';
 import 'package:aion/core/widgets/little_button/ilitten_button.dart';
-import 'package:aion/core/widgets/profile_app_bar/profile_app_bar.dart';
 import 'package:aion/core/widgets/text_form_field/text_form_field.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -17,12 +16,13 @@ class SettingPage extends StatelessWidget {
     TextEditingController familiya = TextEditingController();
     TextEditingController nomer = TextEditingController();
     return Scaffold(
-      appBar: ProfileAppBar(
+       appBar: HomeAppBar(
           title: "Sozlamalar",
-          leftIcon: AppIcons.instance.icArrowBack,
+          leftIcon: Icons.arrow_back_ios_new_rounded,
           leftOntap: () {
             Navigator.pop(context);
           }).getBar(context),
+      
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.symmetric(horizontal: wi(16)),
@@ -77,6 +77,8 @@ class SettingPage extends StatelessWidget {
                         CustomTextField(
                             onChange: (v) {},
                             hintText: "Familiya kiriting",
+                            prefixIcon:
+                                const Icon(Icons.person_outline_rounded),
                             textEditingController: familiya),
                         Padding(
                           padding: EdgeInsets.only(top: he(16), bottom: he(10)),
@@ -86,6 +88,8 @@ class SettingPage extends StatelessWidget {
                         CustomTextField(
                             onChange: (v) {},
                             hintText: "Telefon nomer kiriting",
+                            prefixIcon:
+                                const Icon(Icons.phone),
                             keyboardType: TextInputType.number,
                             textEditingController: nomer),
                       ],

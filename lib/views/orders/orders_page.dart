@@ -1,7 +1,6 @@
+import 'package:aion/core/components/app_bar.dart';
 import 'package:aion/core/constants/app_colors.dart';
-import 'package:aion/core/constants/app_icons.dart';
 import 'package:aion/core/constants/app_style.dart';
-import 'package:aion/core/widgets/profile_app_bar/profile_app_bar.dart';
 import 'package:aion/views/orders/_widget/delivered.dart';
 import 'package:aion/views/orders/_widget/on_the_way.dart';
 import 'package:aion/views/orders/_widget/tab_bar_item.dart';
@@ -18,12 +17,13 @@ class _OrdersPageState extends State<OrdersPage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: ProfileAppBar(
+      appBar: HomeAppBar(
           title: "Mening zakazlarim",
-          leftIcon: AppIcons.instance.icArrowBack,
+          leftIcon: Icons.arrow_back_ios_new_rounded,
           leftOntap: () {
             Navigator.pop(context);
           }).getBar(context),
+     
       body: SafeArea(
         child: DefaultTabController(
           length: 2,

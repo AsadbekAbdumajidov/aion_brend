@@ -28,7 +28,9 @@ class _HomeState extends State<Home> {
         title: Padding(
           padding: EdgeInsets.only(top: he(10)),
           child: GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, AppRoutes.search);
+              },
               child: SvgPicture.asset(
                 AppIcons.instance.icSearchField,
                 height: he(50),

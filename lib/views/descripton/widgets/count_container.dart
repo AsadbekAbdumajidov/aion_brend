@@ -12,6 +12,7 @@ class CountforContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: func,
+      borderRadius: BorderRadius.circular(8),
       child: Container(
         height: he(35),
         width: wi(40),

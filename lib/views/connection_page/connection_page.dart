@@ -1,7 +1,7 @@
+import 'package:aion/core/components/app_bar.dart';
 import 'package:aion/core/constants/app_icons.dart';
 import 'package:aion/core/constants/app_style.dart';
 import 'package:aion/core/utils/size_konfig.dart';
-import 'package:aion/core/widgets/profile_app_bar/profile_app_bar.dart';
 import 'package:aion/views/tabs/profile_passive/_widget/text_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -12,12 +12,14 @@ class Connection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: ProfileAppBar(
+       appBar: HomeAppBar(
           title: "Bog'lanish",
-          leftIcon: AppIcons.instance.icArrowBack,
+          leftIcon: Icons.arrow_back_ios_new_rounded,
           leftOntap: () {
             Navigator.pop(context);
           }).getBar(context),
+      
+     
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20),

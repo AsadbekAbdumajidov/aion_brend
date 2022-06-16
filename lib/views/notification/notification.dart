@@ -1,9 +1,9 @@
+import 'package:aion/core/components/app_bar.dart';
 import 'package:aion/core/constants/app_colors.dart';
 import 'package:aion/core/constants/app_icons.dart';
 import 'package:aion/core/constants/app_style.dart';
 import 'package:aion/core/utils/size_konfig.dart';
 import 'package:aion/core/widgets/little_button/ilitten_button.dart';
-import 'package:aion/core/widgets/profile_app_bar/profile_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -14,12 +14,13 @@ class NotificationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: ProfileAppBar(
+      appBar: HomeAppBar(
           title: "Yangiliklarni kuzatib borish",
-          leftIcon: AppIcons.instance.icArrowBack,
+          leftIcon: Icons.arrow_back_ios_new_rounded,
           leftOntap: () {
             Navigator.pop(context);
           }).getBar(context),
+      
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.symmetric(horizontal: wi(16),vertical: he(16)),

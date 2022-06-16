@@ -31,5 +31,5 @@ class AppIcons {
   String icPhone = "assets/svg/isPhone.svg";
   String icMessage = "assets/svg/isMessage.svg";
   String icSend = "assets/svg/icSend.svg";
-
+  String icSearch = "assets/svg/ic_Search.svg";
 }

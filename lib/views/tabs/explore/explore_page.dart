@@ -1,5 +1,6 @@
 import 'package:aion/core/constants/app_colors.dart';
 import 'package:aion/core/constants/app_style.dart';
+import 'package:aion/core/router/app_routes.dart';
 import 'package:aion/core/utils/size_konfig.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -26,25 +27,30 @@ class Explore extends StatelessWidget {
             mainAxisSpacing: he(12),
             crossAxisCount: 3,
           ),
-          itemBuilder: (_, __) => Container(
+          itemBuilder: (_, __) => InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, AppRoutes.subcategory);
+                },
+                child: Container(
                   decoration: BoxDecoration(
                       color: AppColors.instance.white,
                       borderRadius:
                           const BorderRadius.all(Radius.circular(11))),
                   child: Column(
-                      children: [
-                        CachedNetworkImage(
-                          imageUrl:
-                              "https://printc12.com.ua/wp-content/uploads/2021/08/shapkah.png",
-                          height: he(81),
-                          width: wi(81),
-                        ),
-                        Text(
-                          "Shapkalar",
-                          style: AppTextStyles.instance.styleW500S13Black,
-                        ),
-                      ],
-                    ),
+                    children: [
+                      CachedNetworkImage(
+                        imageUrl:
+                            "https://printc12.com.ua/wp-content/uploads/2021/08/shapkah.png",
+                        height: he(81),
+                        width: wi(81),
+                      ),
+                      Text(
+                        "Shapkalar",
+                        style: AppTextStyles.instance.styleW500S13Black,
+                      ),
+                    ],
+                  ),
+                ),
               )),
     );
   }
