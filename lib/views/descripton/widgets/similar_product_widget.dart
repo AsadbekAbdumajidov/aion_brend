@@ -10,8 +10,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class SimilarWidget extends StatelessWidget {
-  const SimilarWidget({Key? key}) : super(key: key);
+class SimilarProductWidget extends StatelessWidget {
+  const SimilarProductWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class SimilarWidget extends StatelessWidget {
                           topRight: Radius.circular(11)),
                       child: CachedNetworkImage(
                         imageUrl:
-                            "https://www.wantedshop.ru/upload/iblock/b8a/b8abee5262b651f1c0cfd66ba7ac1238.jpg",
+                            "https://ichef.bbci.co.uk/news/640/cpsprodpb/65EC/production/_124429062_gettyimages-1240103375.jpg",
                         fit: BoxFit.cover,
                       ),
                     ),

@@ -8,7 +8,7 @@ import 'package:aion/cubit/favorite/favorite_cubit.dart';
 import 'package:aion/views/descripton/widgets/bottom_button_widget.dart';
 import 'package:aion/views/descripton/widgets/count_container.dart';
 import 'package:aion/views/descripton/widgets/foto_builder_widget.dart';
-import 'package:aion/views/descripton/widgets/similar_builder_widget.dart';
+import 'package:aion/views/descripton/widgets/similar_product_widget.dart';
 import 'package:aion/views/descripton/widgets/size_builder_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -164,7 +164,7 @@ class _DescriptonPageState extends State<DescriptonPage> {
                 ),
                 Text("O’xshash Mahsulotlar",
                     style: AppTextStyles.instance.stylew500S20Black),
-                const SimilarWidget()
+                const SimilarProductWidget()
               ],
             ),
             const BottomButtonWidget()

@@ -25,6 +25,7 @@ class HomeAppBar {
       title: Text(title ?? "", style: AppTextStyles.instance.styleW400S17Black),
       actions: [
         IconButton(
+            splashRadius: he(20),
             onPressed: rightOntap,
             icon: Icon(rightIcon, color: AppColors.instance.black)),
       ],

@@ -1,4 +1,5 @@
 import 'package:aion/core/components/app_bar.dart';
+import 'package:aion/core/constants/app_colors.dart';
 import 'package:aion/core/constants/app_decoration.dart';
 import 'package:aion/core/constants/app_style.dart';
 import 'package:aion/core/utils/size_konfig.dart';
@@ -6,6 +7,7 @@ import 'package:aion/core/widgets/little_button/ilitten_button.dart';
 import 'package:aion/core/widgets/text_form_field/text_form_field.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class SettingPage extends StatelessWidget {
   const SettingPage({Key? key}) : super(key: key);
@@ -16,13 +18,12 @@ class SettingPage extends StatelessWidget {
     TextEditingController familiya = TextEditingController();
     TextEditingController nomer = TextEditingController();
     return Scaffold(
-       appBar: HomeAppBar(
+      appBar: HomeAppBar(
           title: "Sozlamalar",
           leftIcon: Icons.arrow_back_ios_new_rounded,
           leftOntap: () {
             Navigator.pop(context);
           }).getBar(context),
-      
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.symmetric(horizontal: wi(16)),
@@ -32,15 +33,37 @@ class SettingPage extends StatelessWidget {
               padding: EdgeInsets.only(top: he(14), bottom: he(24)),
               child: Row(
                 children: [
-                  ClipRRect(
-                    borderRadius: const BorderRadius.all(Radius.circular(50)),
-                    child: CachedNetworkImage(
-                      height: he(85),
-                      width: wi(90),
-                      imageUrl:
-                          "https://i2.cdn.turner.com/cnnnext/dam/assets/140926165711-john-sutter-profile-image-large-169.jpg",
-                      fit: BoxFit.cover,
-                    ),
+                  Stack(
+                    children: [
+                      ClipRRect(
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(50)),
+                        child: CachedNetworkImage(
+                          height: he(85),
+                          width: wi(90),
+                          imageUrl:
+                              "https://i2.cdn.turner.com/cnnnext/dam/assets/140926165711-john-sutter-profile-image-large-169.jpg",
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 0,
+                        child: Container(
+                          decoration: AppDecoration.instance
+                              .decorationColorBlackWith03BorderRadiusBottom100,
+                          height: he(40),
+                          width: wi(90),
+                          child: GestureDetector(
+                            onTap: () {},
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: SvgPicture.asset(
+                                  "assets/svg/ic_editFoto.svg"),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                   SizedBox(width: wi(24)),
                   Text("Asadbek \nAbdumajidov",
@@ -88,8 +111,7 @@ class SettingPage extends StatelessWidget {
                         CustomTextField(
                             onChange: (v) {},
                             hintText: "Telefon nomer kiriting",
-                            prefixIcon:
-                                const Icon(Icons.phone),
+                            prefixIcon: const Icon(Icons.phone),
                             keyboardType: TextInputType.number,
                             textEditingController: nomer),
                       ],

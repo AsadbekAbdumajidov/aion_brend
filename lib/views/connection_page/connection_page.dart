@@ -22,7 +22,7 @@ class Connection extends StatelessWidget {
      
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(24),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -31,7 +31,7 @@ class Connection extends StatelessWidget {
                   Row(
                     children: [
                       SvgPicture.asset(AppIcons.instance.icPhone),
-                      SizedBox(width: wi(20)),
+                      SizedBox(width: wi(30)),
                       Text("+998909540690",
                           style: AppTextStyles.instance.styleW400S15Black),
                     ],
@@ -41,7 +41,7 @@ class Connection extends StatelessWidget {
                     child: Row(
                       children: [
                         SvgPicture.asset(AppIcons.instance.icPhone),
-                        SizedBox(width: wi(20)),
+                        SizedBox(width: wi(30)),
                         Text("+998909540690",
                             style: AppTextStyles.instance.styleW400S15Black),
                       ],
@@ -50,27 +50,30 @@ class Connection extends StatelessWidget {
                   Row(
                     children: [
                       SvgPicture.asset(AppIcons.instance.icMessage),
-                      SizedBox(width: wi(20)),
+                      SizedBox(width: wi(30)),
                       Text("+998909540690",
                           style: AppTextStyles.instance.styleW400S15Black),
                     ],
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: he(30)),
-                    child: Row(
-                      children: [
-                        SvgPicture.asset(AppIcons.instance.icMap),
-                        SizedBox(width: wi(20)),
-                        Text("Toshkent shahar Chilonzor 24 - daha",
-                            style: AppTextStyles.instance.styleW400S15Black),
-                      ],
+                      padding: EdgeInsets.symmetric(vertical: he(30)),
+                      child: Row(
+                        children: [
+                          SvgPicture.asset(AppIcons.instance.icMap),
+                          SizedBox(width: wi(30)),
+                          Expanded(
+                            child: Text("Toshkent shahar Chilonzor 24 - daha",
+                            overflow: TextOverflow.ellipsis,maxLines: 1,
+                                style: AppTextStyles.instance.styleW400S15Black),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
                   Row(
                     children: [
                       SvgPicture.asset(AppIcons.instance.icSend),
-                      SizedBox(width: wi(20)),
-                      Text("@asadbekabdumajidov",
+                      SizedBox(width: wi(30)),
+                      Text("asadbekabdumajidov",
                           style: AppTextStyles.instance.styleW400S15Black),
                     ],
                   ),

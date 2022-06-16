@@ -7,6 +7,11 @@ class AppDecoration {
   static AppDecoration get instance => _instance;
   AppDecoration._inint();
 
+  BoxDecoration decorationColorBlackWith03BorderRadiusBottom100 = BoxDecoration(
+      color: AppColors.instance.black.withOpacity(0.3),
+      borderRadius: const BorderRadius.only(
+          bottomLeft: Radius.circular(100), bottomRight: Radius.circular(100)));
+
   BoxDecoration decorationColorBackgroundBorderRadiusAll8 = BoxDecoration(
       border: Border.all(width: 2, color: AppColors.instance.backGround),
       borderRadius: const BorderRadius.all(Radius.circular(8)));
