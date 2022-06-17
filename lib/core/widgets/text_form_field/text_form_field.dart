@@ -6,21 +6,21 @@ import 'package:aion/core/utils/size_konfig.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
-  CustomTextField({
-    Key? key,
-    required this.onChange,
-    required this.hintText,
-    this.prefixIcon,
-    this.suffixIcon,
-    this.validator,
-    this.obscure,
-    this.textInputAction,
-    this.fillColor,
-    this.initialValue,
-    this.preIconColor,
-    this.textEditingController,
-    this.keyboardType
-  }) : super(key: key);
+  CustomTextField(
+      {Key? key,
+      required this.onChange,
+      required this.hintText,
+      this.prefixIcon,
+      this.suffixIcon,
+      this.validator,
+      this.obscure,
+      this.textInputAction,
+      this.fillColor,
+      this.initialValue,
+      this.preIconColor,
+      this.textEditingController,
+      this.keyboardType})
+      : super(key: key);
 
   final TextEditingController? textEditingController;
   final Function(String value) onChange;
@@ -49,7 +49,7 @@ class CustomTextField extends StatelessWidget {
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(horizontal: wi(16)),
         suffixIcon: suffixIcon,
-        prefixIcon:prefixIcon,
+        prefixIcon: prefixIcon,
         hintStyle: AppTextStyles.instance.styleW400S15BlackOpacity04,
         hintText: hintText,
         filled: true,
@@ -76,6 +76,42 @@ class CustomTextField extends StatelessWidget {
           borderSide: BorderSide(color: AppColors.instance.black),
         ),
       ),
+    );
+  }
+}
+
+class SimpleTextField extends StatelessWidget {
+  SimpleTextField(
+      {Key? key,
+      required this.onChange,
+      required this.hintText,
+      this.validator,
+      this.textInputAction,
+      this.initialValue,
+      this.textEditingController,
+      this.maxLenght,
+     })
+      : super(key: key);
+
+  final TextEditingController? textEditingController;
+  final Function(String value) onChange;
+  final String hintText;
+  final TextInputAction? textInputAction;
+  final String? initialValue;
+  final int? maxLenght;
+  FormFieldValidator<String>? validator;
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      cursorWidth: wi(2),
+      textInputAction: textInputAction,
+      maxLength: maxLenght,
+      cursorColor: AppColors.instance.blue,
+      keyboardType: TextInputType.number,
+      style: AppTextStyles.instance.styleW600S15Black,
+      decoration: InputDecoration(
+          hintStyle: AppTextStyles.instance.styleW400S15Blackwith05,
+          hintText: hintText),
     );
   }
 }

@@ -17,4 +17,5 @@ class AppRoutes {
   static const search = "/search";
   static const subcategory = "/subcategory";
   static const orderDescription = "/orderDescription";
+  static const cardEdit = "/cardEdit";
 }

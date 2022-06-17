@@ -38,11 +38,10 @@ class AppTextStyles {
     fontWeight: FontWeight.w400,
   );
 
-TextStyle styleW400S15BlackHeight15 = TextStyle(
-  height: he(1.5),
+  TextStyle styleW400S15BlackHeight15 = TextStyle(
+    height: he(1.5),
     color: AppColors.instance.black,
     fontSize: he(15),
-    
     fontWeight: FontWeight.w400,
   );
 
@@ -80,9 +79,15 @@ TextStyle styleW400S15BlackHeight15 = TextStyle(
       fontSize: he(15),
       fontWeight: FontWeight.w600,
       fontStyle: FontStyle.normal);
-  
-  TextStyle styleW700S15Blackwith05 = TextStyle(
+
+  TextStyle styleW400S15Blackwith05 = TextStyle(
       color: AppColors.instance.black.withOpacity(0.5),
+      fontSize: he(16),
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal);
+
+  TextStyle styleW700S15Blackwith05 = TextStyle(
+      color: AppColors.instance.black.withOpacity(0.4),
       fontSize: he(15),
       fontWeight: FontWeight.w700,
       fontStyle: FontStyle.normal);
