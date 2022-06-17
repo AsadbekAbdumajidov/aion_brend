@@ -7,6 +7,7 @@ import 'package:aion/views/descripton/descripton_page.dart';
 import 'package:aion/views/dostavka_page/location.dart';
 import 'package:aion/views/dostavka_page/location_add.dart';
 import 'package:aion/views/notification/notification.dart';
+import 'package:aion/views/order_description/order_desciption_page.dart';
 import 'package:aion/views/orders/orders_page.dart';
 import 'package:aion/views/search/search_page.dart';
 import 'package:aion/views/setting_page/setting_page.dart';
@@ -45,6 +46,8 @@ class Routes {
         return simpleRoute(SearchPage());
       case AppRoutes.subcategory:
         return simpleRoute(const Subcategory());
+        case AppRoutes.orderDescription:
+        return simpleRoute(const OrderDescription());
     }
     return null;
   }

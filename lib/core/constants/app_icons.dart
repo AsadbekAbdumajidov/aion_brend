@@ -23,7 +23,7 @@ class AppIcons {
   String icBell = "assets/svg/ic_bell.svg";
   String icInfo = "assets/svg/ic_info.svg";
   String icShop = "assets/svg/ic_shop_bag.svg";
-  String icCreditCart = "assets/svg/ic_credit_cart.svg";
+  String icCreditCart = "assets/svg/Credit_Card.svg";
   String icMail = "assets/svg/ic_mail.svg";
   String icSetting = "assets/svg/ic_settings.svg";
   String icDostavkaUpdate = "assets/svg/ic_dostavka_update.svg";

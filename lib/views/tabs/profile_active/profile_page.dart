@@ -1,3 +1,4 @@
+import 'package:aion/core/constants/app_colors.dart';
 import 'package:aion/core/constants/app_decoration.dart';
 import 'package:aion/core/constants/app_icons.dart';
 import 'package:aion/core/constants/app_style.dart';
@@ -6,7 +7,9 @@ import 'package:aion/core/utils/size_konfig.dart';
 import 'package:aion/views/tabs/profile_active/_widget/title_button_widget.dart';
 import 'package:aion/views/tabs/profile_passive/_widget/text_button_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ProfileActive extends StatelessWidget {
   const ProfileActive({Key? key}) : super(key: key);
@@ -63,12 +66,25 @@ class ProfileActive extends StatelessWidget {
                               },
                               title: "Yetkazib berish manzili",
                               icon: AppIcons.instance.icMap),
-                          TitleWidget(
-                              onTap: () {
-                                Navigator.pushNamed(context, AppRoutes.notif);
-                              },
-                              title: "Yangiliklarni kuzatib borish",
-                              icon: AppIcons.instance.icBell),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  SvgPicture.asset(AppIcons.instance.icBell),
+                                  SizedBox(width: wi(16)),
+                                  Text("Habarlarni boshqarish",
+                                      style: AppTextStyles
+                                          .instance.styleW400S15Black),
+                                ],
+                              ),
+                              CupertinoSwitch(
+                                  activeColor: AppColors.instance.green,
+                                  value: true,
+                                  trackColor: AppColors.instance.grey,
+                                  onChanged: (value) {}),
+                            ],
+                          ),
                           TitleWidget(
                               onTap: () {
                                 Navigator.pushNamed(context, AppRoutes.order);

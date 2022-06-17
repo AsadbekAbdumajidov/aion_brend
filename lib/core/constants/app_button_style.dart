@@ -44,4 +44,12 @@ class AppButtonStyle {
       borderRadius: BorderRadius.all(Radius.circular(18)),
     ),
   );
+  ButtonStyle buttonStyleBorder8ColorPrimaryHe42Wi = OutlinedButton.styleFrom(
+    fixedSize: Size(wi(347), he(42)),padding: const EdgeInsets.all(0),
+    backgroundColor: AppColors.instance.primarColor,
+    elevation: 0,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(8)),
+    ),
+  );
 }

@@ -43,7 +43,7 @@ class Location extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text("Asadbek Abdumajidov",
-                              style: AppTextStyles.instance.styleW700S18Black),
+                              style: AppTextStyles.instance.styleW500S18Black),
                           GestureDetector(
                             child: SvgPicture.asset(
                                 AppIcons.instance.icDostavkaUpdate),

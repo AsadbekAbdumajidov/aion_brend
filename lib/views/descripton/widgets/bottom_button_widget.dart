@@ -28,7 +28,9 @@ class BottomButtonWidget extends StatelessWidget {
                   ElevatedButton(
                     style: AppButtonStyle
                         .instance.buttonStyleBorder8ColorPrimaryHe42Wi147,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     child: Text("Savatga qo’shish",
                         style: AppTextStyles.instance.styleW500S16White),
                   ),
