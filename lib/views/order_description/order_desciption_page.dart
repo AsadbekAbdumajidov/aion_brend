@@ -5,6 +5,7 @@ import 'package:aion/views/cards/widget/card_item_widget.dart';
 import 'package:aion/views/order_description/widget/adress_item_widget.dart';
 import 'package:aion/views/order_description/widget/bottom_card_widget.dart';
 import 'package:aion/views/order_description/widget/card_add_widget.dart';
+import 'package:aion/views/order_description/widget/cupertino_alert_dialog.dart';
 import 'package:flutter/material.dart';
 
 class OrderDescription extends StatelessWidget {
@@ -61,7 +62,7 @@ class OrderDescription extends StatelessWidget {
                   child: CustomButton(
                       title: "To’lovni amalga oshirish",
                       onTap: () {
-                        Navigator.pop(context);
+                        CupertinoShowDialog.showDialog(context: context);
                       }),
                 )
               ],

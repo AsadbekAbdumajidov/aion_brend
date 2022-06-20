@@ -29,13 +29,11 @@ class CardItemWidget extends StatelessWidget {
     return Padding(
       padding:  EdgeInsets.symmetric(vertical: he(9)),
       child: Container(
-        height: he(186),
-        width: wi(343),
+        
         decoration: AppDecoration.instance.decorationColorWhiteRadiusAll13,
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: he(16)),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: wi(16)),
@@ -88,11 +86,8 @@ class CardItemWidget extends StatelessWidget {
                   ],
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.only(top: he(8)),
-                child:
+              
                     Divider(color: AppColors.instance.black.withOpacity(0.5)),
-              ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: wi(16)),
                 child: Row(

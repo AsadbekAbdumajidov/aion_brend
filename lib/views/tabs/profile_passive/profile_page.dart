@@ -2,8 +2,11 @@ import 'package:aion/core/constants/app_button_style.dart';
 import 'package:aion/core/constants/app_colors.dart';
 import 'package:aion/core/constants/app_icons.dart';
 import 'package:aion/core/constants/app_style.dart';
+import 'package:aion/core/router/app_routes.dart';
 import 'package:aion/core/utils/size_konfig.dart';
+import 'package:aion/views/tabs/profile_active/_widget/title_button_widget.dart';
 import 'package:aion/views/tabs/profile_passive/_widget/text_button_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -59,61 +62,59 @@ class ProfilePassive extends StatelessWidget {
               ),
               SizedBox(height: he(56)),
               Expanded(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: wi(25)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.symmetric(vertical: he(5)),
-                            child: Row(
-                              children: [
-                                SvgPicture.asset(AppIcons.instance.icMap),
-                                SizedBox(width: wi(16)),
-                                Text("Yetkazib berish manzilini kiriting",
-                                    style: AppTextStyles
-                                        .instance.styleW400S15Black)
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(vertical: he(36)),
-                            child: Row(
-                              children: [
-                                SvgPicture.asset(AppIcons.instance.icBell),
-                                SizedBox(width: wi(16)),
-                                Text("Yangiliklarni kuzatib borish",
-                                    style: AppTextStyles
-                                        .instance.styleW400S15Black)
-                              ],
-                            ),
-                          ),
-                          Row(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      children: [
+                        TitleWidget(
+                            onTap: () {
+                              Navigator.pushNamed(context, AppRoutes.location);
+                            },
+                            title: "Yetkazib berish manzili",
+                            icon: AppIcons.instance.icMap),
+                        Padding(
+                          padding: EdgeInsets.symmetric(vertical: he(30)),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              SvgPicture.asset(AppIcons.instance.icInfo),
-                              SizedBox(width: wi(16)),
-                              Text("Biz haqimizda",
-                                  style:
-                                      AppTextStyles.instance.styleW400S15Black)
+                              Row(
+                                children: [
+                                  SvgPicture.asset(AppIcons.instance.icBell),
+                                  SizedBox(width: wi(16)),
+                                  Text("Habarlarni boshqarish",
+                                      style: AppTextStyles
+                                          .instance.styleW400S15Black),
+                                ],
+                              ),
+                              CupertinoSwitch(
+                                  activeColor: AppColors.instance.green,
+                                  value: true,
+                                  trackColor: AppColors.instance.grey,
+                                  onChanged: (value) {}),
                             ],
                           ),
+                        ),
+                        TitleWidget(
+                            onTap: () {
+                              Navigator.pushNamed(context, AppRoutes.about);
+                            },
+                            title: "Biz haqimizda",
+                            icon: AppIcons.instance.icInfo),
+                      ],
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: he(10)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          TextButtonWidget(title: "Facebook", url: ""),
+                          TextButtonWidget(title: "Instagram", url: ""),
+                          TextButtonWidget(title: "Telegram", url: ""),
                         ],
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(bottom: he(10)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
-                            TextButtonWidget(title: "Facebook", url: ""),
-                            TextButtonWidget(title: "Instagram", url: ""),
-                            TextButtonWidget(title: "Telegram", url: ""),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ],

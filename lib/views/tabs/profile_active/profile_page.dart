@@ -122,17 +122,7 @@ class ProfileActive extends StatelessWidget {
                   ),
                 ],
               ),
-              Padding(
-                padding: EdgeInsets.only(bottom: he(20)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    TextButtonWidget(title: "Facebook", url: ""),
-                    TextButtonWidget(title: "Instagram", url: ""),
-                    TextButtonWidget(title: "Telegram", url: ""),
-                  ],
-                ),
-              ),
+              
             ],
           ),
         ));

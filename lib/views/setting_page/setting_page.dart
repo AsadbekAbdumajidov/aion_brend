@@ -1,5 +1,6 @@
+import 'dart:io';
+
 import 'package:aion/core/components/app_bar.dart';
-import 'package:aion/core/constants/app_colors.dart';
 import 'package:aion/core/constants/app_decoration.dart';
 import 'package:aion/core/constants/app_style.dart';
 import 'package:aion/core/utils/size_konfig.dart';
@@ -8,15 +9,25 @@ import 'package:aion/core/widgets/text_form_field/text_form_field.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:image_picker/image_picker.dart';
 
-class SettingPage extends StatelessWidget {
+class SettingPage extends StatefulWidget {
   const SettingPage({Key? key}) : super(key: key);
 
+  @override
+  State<SettingPage> createState() => _SettingPageState();
+}
+
+final ImagePicker _picker = ImagePicker();
+File picture = File("");
+
+class _SettingPageState extends State<SettingPage> {
   @override
   Widget build(BuildContext context) {
     TextEditingController ism = TextEditingController();
     TextEditingController familiya = TextEditingController();
     TextEditingController nomer = TextEditingController();
+
     return Scaffold(
       appBar: HomeAppBar(
           title: "Sozlamalar",
@@ -54,7 +65,9 @@ class SettingPage extends StatelessWidget {
                           height: he(40),
                           width: wi(90),
                           child: GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              imageGaleryAddFireStore();
+                            },
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: SvgPicture.asset(
@@ -126,5 +139,14 @@ class SettingPage extends StatelessWidget {
         ),
       )),
     );
+  }
+
+  imageGaleryAddFireStore() async {
+    final XFile? image =
+        await _picker.pickImage(source: ImageSource.gallery).then((value) {
+      setState(() {
+        picture = File(value!.path);
+      });
+    });
   }
 }
