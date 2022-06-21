@@ -15,6 +15,7 @@ import 'package:aion/views/setting_page/setting_page.dart';
 import 'package:aion/views/sign_in/sign_in.dart';
 import 'package:aion/views/sign_up/sign_up.dart';
 import 'package:aion/views/subcategory/subcategory.dart';
+import 'package:aion/views/verify/verify.dart';
 import 'package:flutter/material.dart';
 
 class Routes {
@@ -53,10 +54,12 @@ class Routes {
         return simpleRoute(const OrderDescription());
       case AppRoutes.cardEdit:
         return simpleRoute(const CardEdit());
-        case AppRoutes.signUp:
+      case AppRoutes.signUp:
         return simpleRoute(const SignUpPage());
-        case AppRoutes.signIn:
+      case AppRoutes.signIn:
         return simpleRoute(const SigninPage());
+      case AppRoutes.verify:
+        return simpleRoute(LoginVerifyPage());
     }
     return null;
   }

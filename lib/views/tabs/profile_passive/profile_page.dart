@@ -19,6 +19,7 @@ class ProfilePassive extends StatelessWidget {
         appBar: AppBar(
           title: Text("Meni Kabinetim",
               style: AppTextStyles.instance.styleW400S17Black),
+              
         ),
         body: SafeArea(
             child: Padding(

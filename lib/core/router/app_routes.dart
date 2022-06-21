@@ -17,4 +17,5 @@ class AppRoutes {
   static const cardEdit = "/cardEdit";
   static const signUp = "/signUp";
   static const signIn = "/signIn";
+   static const verify = "/verify";
 }

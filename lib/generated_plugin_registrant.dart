@@ -7,6 +7,7 @@
 
 import 'package:connectivity_plus_web/connectivity_plus_web.dart';
 import 'package:image_picker_for_web/image_picker_for_web.dart';
+import 'package:smart_auth/smart_auth_web.dart';
 import 'package:url_launcher_web/url_launcher_web.dart';
 
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
@@ -15,6 +16,7 @@ import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 void registerPlugins(Registrar registrar) {
   ConnectivityPlusPlugin.registerWith(registrar);
   ImagePickerPlugin.registerWith(registrar);
+  SmartAuthWeb.registerWith(registrar);
   UrlLauncherPlugin.registerWith(registrar);
   registrar.registerMessageHandler();
 }

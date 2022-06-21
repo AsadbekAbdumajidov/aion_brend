@@ -1,6 +1,7 @@
 import 'package:aion/core/components/app_bar.dart';
 import 'package:aion/core/constants/app_colors.dart';
 import 'package:aion/core/constants/app_style.dart';
+import 'package:aion/core/router/app_routes.dart';
 import 'package:aion/core/utils/size_konfig.dart';
 import 'package:aion/core/widgets/custom_button/custom_button.dart';
 import 'package:aion/core/widgets/text_form_field/text_form_field.dart';
@@ -88,7 +89,10 @@ class _SignUpPageState extends State<SignUpPage> {
                 child: CustomButton(
                   title: "Davom etish",
                   onTap: () {
-                    if (formKey.currentState!.validate()) {}
+                    if (formKey.currentState!.validate()) {
+                      Navigator.pushNamed(context, AppRoutes.verify,
+                          arguments: phoneController.text);
+                    }
                   },
                 ),
               ),

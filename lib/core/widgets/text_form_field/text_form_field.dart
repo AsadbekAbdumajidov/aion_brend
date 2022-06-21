@@ -67,7 +67,7 @@ class CustomTextField extends StatelessWidget {
         focusedBorder: OutlineInputBorder(
           borderRadius: const BorderRadius.all(Radius.circular(12)),
           borderSide: BorderSide(
-            color: AppColors.instance.blue.withOpacity(0.5),
+            color: AppColors.instance.primarColor.withOpacity(0.5),
             width: 1.2,
           ),
         ),
@@ -170,7 +170,7 @@ class CustomPrefixTextField extends StatelessWidget {
         focusedBorder:  OutlineInputBorder(
           borderRadius:const BorderRadius.all(Radius.circular(16)),
           borderSide: BorderSide(
-            color:  AppColors.instance.blue.withOpacity(0.5),
+            color:  AppColors.instance.primarColor.withOpacity(0.5),
             
           ),
         ),
