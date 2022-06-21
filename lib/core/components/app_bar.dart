@@ -17,6 +17,7 @@ class HomeAppBar {
     this.leftIcon,
   });
   getBar(context) {
+    
     return AppBar(
       leading: IconButton(
           splashRadius: he(20),

@@ -55,7 +55,9 @@ class ProfilePassive extends StatelessWidget {
                   OutlinedButton(
                       style: AppButtonStyle
                           .instance.buttonStyleRadius18TransparentW160H54,
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, AppRoutes.signUp);
+                      },
                       child: Text("Ro'yxatdan o'tish",
                           style: AppTextStyles.instance.styleW500S14Black)),
                 ],

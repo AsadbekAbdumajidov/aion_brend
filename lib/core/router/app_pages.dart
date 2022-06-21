@@ -12,6 +12,7 @@ import 'package:aion/views/order_description/order_desciption_page.dart';
 import 'package:aion/views/orders/orders_page.dart';
 import 'package:aion/views/search/search_page.dart';
 import 'package:aion/views/setting_page/setting_page.dart';
+import 'package:aion/views/sign_up/sign_up.dart';
 import 'package:aion/views/subcategory/subcategory.dart';
 import 'package:flutter/material.dart';
 
@@ -51,6 +52,8 @@ class Routes {
         return simpleRoute(const OrderDescription());
       case AppRoutes.cardEdit:
         return simpleRoute(const CardEdit());
+        case AppRoutes.signUp:
+        return simpleRoute(const SignUpPage());
     }
     return null;
   }

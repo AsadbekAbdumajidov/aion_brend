@@ -5,7 +5,6 @@ import 'package:aion/core/constants/app_style.dart';
 import 'package:aion/core/router/app_routes.dart';
 import 'package:aion/core/utils/size_konfig.dart';
 import 'package:aion/views/tabs/profile_active/_widget/title_button_widget.dart';
-import 'package:aion/views/tabs/profile_passive/_widget/text_button_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

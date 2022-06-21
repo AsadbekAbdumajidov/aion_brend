@@ -1,6 +1,3 @@
-
-import 'package:aion/views/order_description/order_desciption_page.dart';
-
 class AppRoutes {
   static const splash = '/';
   static const navBar = '/navBar';
@@ -18,4 +15,5 @@ class AppRoutes {
   static const subcategory = "/subcategory";
   static const orderDescription = "/orderDescription";
   static const cardEdit = "/cardEdit";
+  static const signUp = "/signUp";
 }

@@ -1,5 +1,4 @@
 import 'package:aion/core/components/app_bar.dart';
-import 'package:aion/core/constants/app_colors.dart';
 import 'package:aion/core/constants/app_decoration.dart';
 import 'package:aion/core/constants/app_style.dart';
 import 'package:aion/core/utils/size_konfig.dart';

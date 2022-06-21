@@ -142,11 +142,11 @@ class _SettingPageState extends State<SettingPage> {
   }
 
   imageGaleryAddFireStore() async {
-    final XFile? image =
-        await _picker.pickImage(source: ImageSource.gallery).then((value) {
+    await _picker.pickImage(source: ImageSource.gallery).then((value) {
       setState(() {
         picture = File(value!.path);
       });
+      return null;
     });
   }
 }
