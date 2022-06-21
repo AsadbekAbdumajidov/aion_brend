@@ -48,7 +48,9 @@ class ProfilePassive extends StatelessWidget {
                   ElevatedButton(
                       style: AppButtonStyle
                           .instance.buttonStyleRadius18WhiteW110H54,
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, AppRoutes.signIn);
+                      },
                       child: Text("Kirish",
                           style: AppTextStyles.instance.styleW500S14Black)),
                   SizedBox(width: wi(10)),
