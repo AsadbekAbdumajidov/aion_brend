@@ -49,7 +49,7 @@ class ProfileActive extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    height: he(404),
+                    height: he(360),
                     decoration:
                         AppDecoration.instance.decorationColorWhiteRadius14,
                     child: Padding(
@@ -90,12 +90,12 @@ class ProfileActive extends StatelessWidget {
                               },
                               title: "Mening zakazlarim",
                               icon: AppIcons.instance.icShop),
-                          TitleWidget(
-                              onTap: () {
-                                Navigator.pushNamed(context, AppRoutes.cardAdd);
-                              },
-                              title: "karta qo’shish",
-                              icon: AppIcons.instance.icCreditCart),
+                          // TitleWidget(
+                          //     onTap: () {
+                          //       Navigator.pushNamed(context, AppRoutes.cardAdd);
+                          //     },
+                          //     title: "karta qo’shish",
+                          //     icon: AppIcons.instance.icCreditCart),
                           TitleWidget(
                               onTap: () {
                                 Navigator.pushNamed(

@@ -1,5 +1,6 @@
 import 'package:aion/core/constants/app_icons.dart';
 import 'package:aion/core/constants/app_style.dart';
+import 'package:aion/core/extension/for_context.dart';
 import 'package:aion/core/utils/size_konfig.dart';
 import 'package:aion/src/views/tabs/cart/widgets/bottom_button_widget.dart';
 import 'package:aion/src/views/tabs/cart/widgets/order_item_widget.dart';
@@ -22,24 +23,26 @@ class Cart extends StatelessWidget {
                   child: SvgPicture.asset(AppIcons.instance.icTrash))),
         ],
       ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: wi(16)),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SizedBox(
-              height: he(541),
+      body: Stack(
+        children: [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: wi(16)),
+            child: SizedBox(
+              height: context.h,
               child: ListView.builder(
-                  itemCount: 5,
+                  shrinkWrap: true,
+                  itemCount: 8,
                   physics: const BouncingScrollPhysics(),
                   padding: EdgeInsets.only(top: he(10)),
                   itemBuilder: (_, __) {
                     return const OrderItemWidget();
                   }),
             ),
-            const ButtonForOrder()
-          ],
-        ),
+          ),
+         const Positioned(
+          bottom: 0,
+          child:  ButtonForOrder())
+        ],
       ),
     );
   }

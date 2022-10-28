@@ -29,29 +29,29 @@ class OrderDescription extends StatelessWidget {
               children: [
                 const AdressItemWidget(),
                 SizedBox(height: he(9)),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    CardAddWidget(
-                      cardName: "Humo",
-                      cardNumber: "0000 0000 0000",
-                      onTap: () {},
-                    ),
-                    CardAddWidget(
-                      cardName: "Uzcard",
-                      cardNumber: "0000 0000 0000",
-                      onTap: () {},
-                    ),
-                  ],
-                ),
-                CardItemWidget(
-                  addOntap: () {},
-                  card: "",
-                  cardHolder: "Karta kiritilmagan",
-                  cardNum: "0000 0000 0000 0000",
-                  icCardIcon: "ic_uzCard",
-                  validityPeriod: "06/55",
-                )
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                //     CardAddWidget(
+                //       cardName: "Humo",
+                //       cardNumber: "0000 0000 0000",
+                //       onTap: () {},
+                //     ),
+                //     CardAddWidget(
+                //       cardName: "Uzcard",
+                //       cardNumber: "0000 0000 0000",
+                //       onTap: () {},
+                //     ),
+                //   ],
+                // ),
+                // CardItemWidget(
+                //   addOntap: () {},
+                //   card: "",
+                //   cardHolder: "Karta kiritilmagan",
+                //   cardNum: "0000 0000 0000 0000",
+                //   icCardIcon: "ic_uzCard",
+                //   validityPeriod: "06/55",
+                // )
               ],
             ),
             Column(
