@@ -13,16 +13,16 @@ class AppButtonStyle {
     fixedSize: Size(wi(101), he(36)),padding: const EdgeInsets.all(0),
     backgroundColor: AppColors.instance.primarColor,
     elevation: 0,
-    shape: const RoundedRectangleBorder(
-      borderRadius: BorderRadius.all(Radius.circular(8)),
+    shape:  const RoundedRectangleBorder(
+      borderRadius:BorderRadius.all(Radius.circular(8)),
     ),
   );
   ButtonStyle buttonStyleBorder8ColorPrimaryHe42Wi147 = OutlinedButton.styleFrom(
     fixedSize: Size(wi(147), he(42)),padding: const EdgeInsets.all(0),
     backgroundColor: AppColors.instance.primarColor,
     elevation: 0,
-    shape: const RoundedRectangleBorder(
-      borderRadius: BorderRadius.all(Radius.circular(8)),
+    shape:  const RoundedRectangleBorder(
+      borderRadius:BorderRadius.all(Radius.circular(8)),
     ),
   );
 
@@ -31,8 +31,8 @@ class AppButtonStyle {
     fixedSize: Size(wi(110), he(54)),
     backgroundColor: AppColors.instance.white,
     elevation: 0,
-    shape: const RoundedRectangleBorder(
-      borderRadius: BorderRadius.all(Radius.circular(18)),
+    shape:  const RoundedRectangleBorder(
+      borderRadius:BorderRadius.all(Radius.circular(18)),
     ),
   );
 
@@ -40,16 +40,16 @@ class AppButtonStyle {
     fixedSize: Size(wi(160), he(54)),
     // backgroundColor: AppColors.instance.white,
     elevation: 0,
-    shape: const RoundedRectangleBorder(
-      borderRadius: BorderRadius.all(Radius.circular(18)),
+    shape:  const RoundedRectangleBorder(
+      borderRadius:BorderRadius.all(Radius.circular(18)),
     ),
   );
   ButtonStyle buttonStyleBorder8ColorPrimaryHe42Wi = OutlinedButton.styleFrom(
     fixedSize: Size(wi(347), he(42)),padding: const EdgeInsets.all(0),
     backgroundColor: AppColors.instance.primarColor,
     elevation: 0,
-    shape: const RoundedRectangleBorder(
-      borderRadius: BorderRadius.all(Radius.circular(8)),
+    shape:  const RoundedRectangleBorder(
+      borderRadius:BorderRadius.all(Radius.circular(8)),
     ),
   );
 }

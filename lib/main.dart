@@ -34,7 +34,7 @@ appMaterial() {
     supportedLocales: const [
       Locale('en'),
       Locale('ru'),
-      Locale('fr'),
+      Locale('fr'), 
     ],
     builder: (context, child) {
       return ScrollConfiguration(
