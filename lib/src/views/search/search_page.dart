@@ -1,3 +1,5 @@
+import 'package:aion/core/constants/app_colors.dart';
+import 'package:aion/core/extension/for_context.dart';
 import 'package:aion/src/components/app_bar.dart';
 import 'package:aion/src/components/search_app_bar.dart';
 import 'package:aion/core/router/app_routes.dart';
@@ -12,6 +14,7 @@ class SearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.instance.backGround,
       appBar: HomeAppBar(
           title: "Qidiruvlar",
           leftIcon: Icons.arrow_back_ios_new_rounded,
@@ -20,14 +23,16 @@ class SearchPage extends StatelessWidget {
           }).getBar(context),
       body: Column(
         children: [
-           Padding(
-             padding:  EdgeInsets.symmetric(vertical: he(4)),
-             child: SearchBar(
+          Container(
+            height: he(50),
+            width: context.w,
+            color: AppColors.instance.backGround,
+            child: SearchBar(
               focus: _focusNode,
-              autoFocus: true,
+              autoFocus: false,
               controller: controller,
+            ),
           ),
-           ),
           Expanded(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: wi(16)),

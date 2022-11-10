@@ -1,3 +1,5 @@
+import 'package:aion/core/constants/app_colors.dart';
+import 'package:aion/src/components/blur_widget.dart';
 import 'package:aion/src/components/carusel_slider.dart';
 import 'package:aion/core/constants/app_icons.dart';
 import 'package:aion/core/constants/app_style.dart';
@@ -19,7 +21,12 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
+                flexibleSpace: const BlurWidget(),
+
+        backgroundColor: AppColors.instance.transparent,
+        elevation: 0,
         title: Padding(
           padding: EdgeInsets.only(top: he(10)),
           child: GestureDetector(
@@ -32,9 +39,10 @@ class _HomeState extends State<Home> {
               )),
         ),
       ),
-      body: SafeArea(
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: wi(16)),
         child: ListView(
-          padding: EdgeInsets.symmetric(horizontal: wi(16)),
+          padding: EdgeInsets.only(top: he(100)),
           children: [
             Padding(
               padding: EdgeInsets.symmetric(vertical: he(12)),
@@ -44,23 +52,21 @@ class _HomeState extends State<Home> {
             SizedBox(height: he(20)),
             Text("Barchasi", style: AppTextStyles.instance.styleW600S15Black),
             GridView.builder(
-              padding: EdgeInsets.symmetric(vertical: he(10)),
-              scrollDirection: Axis.vertical,
-              shrinkWrap: true,
-              itemCount: 15,
-              physics: const NeverScrollableScrollPhysics(),
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                mainAxisExtent: he(244),
-                crossAxisSpacing: he(5),
-                mainAxisSpacing: he(5),
-                crossAxisCount: 2,
-              ),
-              itemBuilder: (_, __) => const ProductItem()),
+                padding: EdgeInsets.symmetric(vertical: he(10)),
+                scrollDirection: Axis.vertical,
+                shrinkWrap: true,
+                itemCount: 15,
+                physics: const NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  mainAxisExtent: he(244),
+                  crossAxisSpacing: he(5),
+                  mainAxisSpacing: he(5),
+                  crossAxisCount: 2,
+                ),
+                itemBuilder: (_, __) => const ProductItem()),
           ],
         ),
       ),
     );
   }
-
- 
 }

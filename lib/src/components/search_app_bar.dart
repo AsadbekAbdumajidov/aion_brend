@@ -30,37 +30,28 @@ class SearchBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     /// Add Hero Animation here with some tag.
     /// Problem with this is that whenever Hero animation starts, keyboard is automatically dismissed.
-    return Material(
-      type: MaterialType.transparency,
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-        child: Row(
-          children: [
-            Expanded(
-              child: TextField(
-                focusNode: focus,
-                onTap: onTap,
-                textInputAction: TextInputAction.done,
-                controller: controller,
-                readOnly: readOnly ?? false,
-                autofocus: autoFocus ?? false,
-                onChanged: onChange,
-                decoration: InputDecoration(
-                  hintText: "Search",
-                  contentPadding: EdgeInsets.zero,
-                  prefixIcon: Padding(
-                    padding: const EdgeInsets.all(13),
-                    child: SvgPicture.asset(AppIcons.instance.icSearch),
-                  ),
-                  filled: true,
-                  fillColor: AppColors.instance.grey,
-                  border: inputBorder(),
-                  focusedBorder: inputBorder(),
-                  enabledBorder: inputBorder(),
-                ),
-              ),
-            ),
-          ],
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+      child: TextField(
+        focusNode: focus,
+        onTap: onTap,
+        textInputAction: TextInputAction.done,
+        controller: controller,
+        readOnly: readOnly ?? false,
+        autofocus: autoFocus ?? false,
+        onChanged: onChange,
+        decoration: InputDecoration(
+          hintText: "Search",
+          contentPadding: EdgeInsets.zero,
+          prefixIcon: Padding(
+            padding: const EdgeInsets.all(13),
+            child: SvgPicture.asset(AppIcons.instance.icSearch),
+          ),
+          filled: true,
+          fillColor: AppColors.instance.grey,
+          border: inputBorder(),
+          focusedBorder: inputBorder(),
+          enabledBorder: inputBorder(),
         ),
       ),
     );

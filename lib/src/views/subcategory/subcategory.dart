@@ -17,6 +17,8 @@ class Subcategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      extendBodyBehindAppBar: true,
       appBar: HomeAppBar(
           title: "Subcategory",
           leftIcon: Icons.arrow_back_ios_new_rounded,
@@ -26,7 +28,8 @@ class Subcategory extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: wi(16)),
         child: GridView.builder(
-          padding: EdgeInsets.symmetric(vertical: he(15)),
+          
+          padding: EdgeInsets.only(top: he(120)),
           scrollDirection: Axis.vertical,
           shrinkWrap: true,
           itemCount: 15,

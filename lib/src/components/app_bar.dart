@@ -1,6 +1,7 @@
 import 'package:aion/core/constants/app_colors.dart';
 import 'package:aion/core/constants/app_style.dart';
 import 'package:aion/core/utils/size_konfig.dart';
+import 'package:aion/src/components/blur_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeAppBar {
@@ -19,6 +20,9 @@ class HomeAppBar {
   getBar(context) {
     
     return AppBar(
+      elevation: 0,
+        backgroundColor: AppColors.instance.transparent,
+        flexibleSpace: const BlurWidget(),
       leading: IconButton(
           splashRadius: he(20),
           onPressed: leftOntap,

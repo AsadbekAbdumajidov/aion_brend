@@ -30,13 +30,13 @@ class _CaruselState extends State<Carusel> {
             children: [
               Container(
                 height: he(171),
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width *1,
                 decoration: BoxDecoration(
                   color: AppColors.instance.white,
                   borderRadius: const BorderRadius.all(Radius.circular(15)),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.only(left: wi(16), right: wi(16)),
+                  padding: EdgeInsets.only(left: wi(16), right: wi(6)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

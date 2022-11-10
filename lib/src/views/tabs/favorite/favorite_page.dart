@@ -3,6 +3,7 @@ import 'package:aion/core/constants/app_style.dart';
 import 'package:aion/core/extension/for_context.dart';
 import 'package:aion/core/router/app_routes.dart';
 import 'package:aion/core/utils/size_konfig.dart';
+import 'package:aion/src/components/blur_widget.dart';
 import 'package:aion/src/cubit/favorite/favorite_cubit.dart';
 import 'package:aion/src/cubit/favorite/favorite_state.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -16,14 +17,19 @@ class Favorite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.instance.transparent,
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         title: Text("Men yoqtirgan",
             style: AppTextStyles.instance.styleW400S17Black),
+        elevation: 0,
+        backgroundColor: AppColors.instance.transparent,
+        flexibleSpace: const BlurWidget(),
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: wi(16)),
         child: GridView.builder(
-          padding: EdgeInsets.symmetric(vertical: he(15)),
+          padding: EdgeInsets.only(top: he(110)),
           scrollDirection: Axis.vertical,
           shrinkWrap: true,
           itemCount: 15,

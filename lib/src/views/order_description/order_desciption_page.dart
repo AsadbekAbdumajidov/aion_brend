@@ -1,10 +1,8 @@
 import 'package:aion/src/components/app_bar.dart';
 import 'package:aion/core/utils/size_konfig.dart';
 import 'package:aion/core/widgets/custom_button/custom_button.dart';
-import 'package:aion/src/views/cards/widget/card_item_widget.dart';
 import 'package:aion/src/views/order_description/widget/adress_item_widget.dart';
 import 'package:aion/src/views/order_description/widget/bottom_card_widget.dart';
-import 'package:aion/src/views/order_description/widget/card_add_widget.dart';
 import 'package:aion/src/views/order_description/widget/cupertino_alert_dialog.dart';
 import 'package:flutter/material.dart';
 

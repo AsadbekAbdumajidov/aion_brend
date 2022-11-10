@@ -13,4 +13,5 @@ class AppColors {
   Color blue = const Color(0xFF5A80FE);
   Color green =const Color(0xFF23E637); 
   Color red =  Colors.red;
+  Color transparent =  Colors.transparent;
 }
